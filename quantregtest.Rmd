@@ -4,8 +4,94 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+library(quantmod)
+library(finreportr)
+library(edgar)
+library(BatchGetSymbols)
+library(lubridate)
+
+library(pdftools)
+library(glue)
+library(tidyverse)
 
 
+ipos = read.csv("MT IPO DATA_No pharma_No Additions.csv")
+ipos = ipos %>%
+  filter(Issue.Date != "")
+View(ipos)
+```
+
+## MARKET FACTORS
+```{r}
+GetMarketPerformance = function(issue_date){
+  oneMonthBefore = BatchGetSymbols(tickers = "SPY", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]][1]
+  
+  l = length(BatchGetSymbols(tickers = "SPY", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]])
+  
+  atIssue = BatchGetSymbols(tickers = "SPY", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]][l]
+  
+  thirtyDayPerformance = (atIssue - oneMonthBefore) / oneMonthBefore
+  
+  return(thirtyDayPerformance)
+  
+}
+
+GetVIX = function(issue_date){
+  oneMonthBefore = BatchGetSymbols(tickers = "^VIX", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]][1]
+  
+  l = length(BatchGetSymbols(tickers = "^VIX", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]])
+  
+  atIssue = BatchGetSymbols(tickers = "^VIX", mdy(issue_date) - 30, mdy(issue_date), freq.data = 'daily')[["df.tickers"]][["price.close"]][l]
+
+  return(atIssue)
+  
+}
+
+ipos$market_performance = sapply(ipos$Issue.Date, GetMarketPerformance)
+ipos$VIX_before = sapply(ipos$Issue.Date, GetVIX)
+
+ipos = ipos %>%
+  rename(Proceeds = Proceeds.Amt...in..this.Mkt....mil.,
+         Offer.Price = X...Offer....Price,
+         Amount.Filed = Amt.Filed....in.this.Mkt.....mil.,
+         Additional.Lead.Underwriters = X..of.additional.lead.underwriters,
+         Total.Revenues.Last.Reported = Total.Revenues.Last.Reported.Fiscal.Period.in.S.1..US..mil.,
+         Total.Assets = X..Total...Assets...Before....the..Offering......mil.,
+         HalfYearChange = X..Change.Stock.Price.180.Days.After.Offer)
+
+ipos$Total.Assets = as.numeric(ipos$Total.Assets)
+ipos$Total.Revenues.Last.Reported = as.numeric(ipos$Total.Revenues.Last.Reported)
+ipos$Selling.and.Marketing = as.numeric(ipos$Selling.and.Marketing)
+ipos$Total.Operating.Expenses = as.numeric(ipos$Total.Operating.Expenses)
+ipos$Net.Income = as.numeric(ipos$Net.Income)
+ipos$Net.Income.Margin = ipos$Net.Income/ipos$Total.Revenues.Last.Reported
+  
+write.csv(ipos, "MT IPO DATA_with_market.csv")
+
+
+```
+
+#EDA
+```{r}
+ggplot(ipos, aes(x= Total.Revenues.Last.Reported)) + geom_histogram(binwidth=100, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Selling.and.Marketing)) + geom_histogram(binwidth=10, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Total.Operating.Expenses)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Net.Income)) + geom_histogram(binwidth=40, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+
+
+
+```
+
+
+
+#REGRESSION
+```{r}
+model.1 = lm(data = ipos, formula = HalfYearChange ~ Type.of.Security + Investment.Bank..Lead.Left. + Additional.Lead.Underwriters)
+summary(model.1)
+
+model.2 = lm(data = ipos, formula =  HalfYearChange ~ VIX_before + market_performance + Total.Revenues.Last.Reported + Total.Assets + Selling.and.Marketing + Total.Operating.Expenses + Net.Income + Net.Income.Margin)
+summary(model.2)
 
 
 ```
