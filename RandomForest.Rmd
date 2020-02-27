@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+##LOAD
+```{r}
+library(quantmod)
+library(finreportr)
+library(edgar)
+library(BatchGetSymbols)
+library(lubridate)
+
+library(pdftools)
+library(glue)
+library(tidyverse)
+
+ipos = read.csv("MT IPO DATA_with_market.csv")
+
+ipos$Net.Income.Margin = ipos$Net.Income / ipos$Total.Revenues.Last.Reported-1
+ipos$OneDayChange = ipos$FirstDayClose/ipos$Offer.Price -1
+
+```
+
+##EDA
+```{r}
+
+ggplot(ipos, aes(x= Total.Revenues.Last.Reported)) + geom_histogram(binwidth=100, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Selling.and.Marketing)) + geom_histogram(binwidth=10, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Total.Operating.Expenses)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Net.Income)) + geom_histogram(binwidth=40, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+
+ggplot(ipos, aes(x= OneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+
+
+```
+
+##RF
+
+```{r}
+
+model.1 = lm(data = ipos, formula = OneDayChange ~ Type.of.Security + Investment.Bank..Lead.Left. + Additional.Lead.Underwriters + Primary)
+summary(model.1)
+
+
+model.2 = lm(data = ipos, formula =  OneDayChange ~ VIX_before + market_performance + Total.Revenues.Last.Reported + Total.Assets + Selling.and.Marketing + Total.Operating.Expenses + Net.Income + Net.Income.Margin)
+summary(model.2)
+
+
+
+```
+
+```

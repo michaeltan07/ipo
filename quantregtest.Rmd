@@ -47,6 +47,32 @@ GetVIX = function(issue_date){
   
 }
 
+ipos$Ticker.Symbol = as.character(ipos$Ticker.Symbol)
+ipos$Ticker.Symbol[12] = "MXL"
+
+stocks = data_frame(
+  tickers = ipos$Ticker.Symbol,
+  start = mdy(ipos$Issue.Date) + 1,
+  end = mdy(ipos$Issue.Date) + 2
+)
+
+
+
+l.out = purrr::pmap(stocks, ~BatchGetSymbols(tickers = ..1,
+                                     first.date = ..2,
+                                     last.date = ..3, 
+                                     freq.data = "daily"))
+
+for(i in 1:nrow(ipos)){
+  if(length(l.out[[i]][["df.tickers"]][["price.close"]]) == 0){
+      ipos$FirstDayClose[i] = NA
+  }  else {
+      ipos$FirstDayClose[i] = l.out[[i]][["df.tickers"]][["price.close"]][[1]]
+  }
+}
+
+ipos$OneDayChange = ipos$FirstDayClose/ipos$Offer.Price - 1
+
 ipos$market_performance = sapply(ipos$Issue.Date, GetMarketPerformance)
 ipos$VIX_before = sapply(ipos$Issue.Date, GetVIX)
 
@@ -81,6 +107,10 @@ ggplot(ipos, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="b
 
 
 
+l.out <- BatchGetSymbols(tickers = tickers, 
+                         first.date = first.date,
+                         last.date = last.date, 
+                         freq.data = freq.data)
 ```
 
 
@@ -92,6 +122,8 @@ summary(model.1)
 
 model.2 = lm(data = ipos, formula =  HalfYearChange ~ VIX_before + market_performance + Total.Revenues.Last.Reported + Total.Assets + Selling.and.Marketing + Total.Operating.Expenses + Net.Income + Net.Income.Margin)
 summary(model.2)
+
+summary(ipos$Investment.Bank..Lead.Left.)
 
 
 ```
