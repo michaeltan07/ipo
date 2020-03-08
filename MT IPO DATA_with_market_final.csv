@@ -1,5 +1,5 @@
-,Date.of.Finan..cial.Period.Before.Offer,Issue.Date,Issuer,Business.Description,Nation,Ticker.Symbol,Principal.Amount....mil.,Proceeds,Offer.Price,Type.of.Security,IPO.Flag..Y.N.,Notable VC,Investment.Bank..Lead.Left.,Additional.Lead.Underwriters,Total.VC.Funding.Raised,Age.of.Firm,Total.Revenues.in.Previous.Year,Total.Revenues.Last.Reported,Selling.and.Marketing,Total.Operating.Expenses,Net.Income,Net.Income.Margin,Long.Term.Debt,Total.Assets,Long.Term.Debt.to.Total.Asset.Ratio,HalfYearChange,X..Stock...Price..180.Days...After...Offer,market_performance,VIX_before,OneDayChange,FirstDayClose
-1,3/31/09,4/14/09,Bridgepoint Education Inc,"Own,operate college,university",United States,BPI,141.75,141.8,10.5,Common Shares,Yes,"Warburg Pincus LLC
+,Date.of.Finan..cial.Period.Before.Offer,Issue.Date,Issuer,Business.Description,Nation,Ticker.Symbol,Principal.Amount....mil.,Proceeds,Offer.Price,Type.of.Security,IPO.Flag..Y.N.,Notable.VC,Investment.Bank..Lead.Left.,Additional.Lead.Underwriters,Total.VC.Funding.Raised,Age.of.Firm,Total.Revenues.in.Previous.Year,Total.Revenues.Last.Reported,Selling.and.Marketing,Total.Operating.Expenses,Net.Income,Net.Income.Margin,Long.Term.Debt,Total.Assets,Long.Term.Debt.to.Total.Asset.Ratio,market_performance,VIX_before,OneDayChange,FirstDayClose
+1,3/31/09,4/14/09,Bridgepoint Education Inc,"Own,operate college,university",United States,BPI,141.75,141.80,10.50,Common Shares,Yes,"Warburg Pincus LLC
 Warburg Pincus LLC
 Warburg Pincus LLC
 Venturetek International
@@ -8,8 +8,8 @@ Undisclosed Firm
 Warburg Pincus LLC
 Warburg Pincus LLC
 Warburg Pincus LLC
-Warburg Pincus LLC",Bank of America,1,"14,073.0",NA,85.709,218.29,68.8,184.87,26.431,12.11%,0.23,22,0.14%,60.67,16.87,0.111916648,37.669998,9.52%,11.5
-2,3/31/09,5/13/09,DigitalGlobe Inc,Pvd satellite based imaging,United States,DGI,279.3,279.3,19,Common Shares,Yes,"Technology Venture Investors
+Warburg Pincus LLC",Bank of America,1,14073.00,NA,85.709,218.29,68.8,184.87,26.431,0.121082047,0.23,170.20,0.14%,0.111916648,37.669998,0.095238095,11.5
+2,3/31/09,5/13/09,DigitalGlobe Inc,Pvd satellite based imaging,United States,DGI,279.30,279.30,19.00,Common Shares,Yes,"Technology Venture Investors
 Burr Egan Deleage And Co
 Morgan Stanley Private Equity
 Undisclosed Firm
@@ -19,8 +19,8 @@ Burr Egan Deleage And Co
 Technology Venture Investors
 Burr Egan Deleage And Co
 Technology Venture Investors
-Undisclosed Firm",Morgan Stanley,1,"2,544.0",NA,151.7,275.2,28.5,180.3,53.8,19.55%,274.6,2,27.13%,24.16,23.59,0.033205149,33.650002,17.58%,22.34
-3,3/31/09,5/19/09,SolarWinds Inc,Develop network mgmt software,United States,SWI,151.453,151.5,12.5,Common Shares,Yes,"Silver Lake Partners LP
+Undisclosed Firm",Morgan Stanley,1,2544.00,NA,151.7,275.2,28.5,180.3,53.8,0.195494186,274.6,1012.00,27.13%,0.033205149,33.650002,0.175789474,22.34
+3,3/31/09,5/19/09,SolarWinds Inc,Develop network mgmt software,United States,SWI,151.45,151.50,12.50,Common Shares,Yes,"Silver Lake Partners LP
 Silver Lake Partners LP
 Thoma Bravo LLC
 Thoma Bravo LLC
@@ -51,8 +51,8 @@ HarbourVest Partners LLC
 HarbourVest Partners LLC
 HarbourVest Partners LLC
 HarbourVest Partners LLC
-HarbourVest Partners LLC",Goldman Sachs,3,"171,837.0",NA,38.234,61.735,22.7,28.571,13.607,40.18%,101.1,77,113.47%,56.24,19.53,0.092173115,28.799999,10.00%,13.75
-4,3/31/09,5/21/09,OpenTable Inc,Pvd online reservation svcs,United States,OPEN,60,60,20,Common Shares,Yes,"Draper Richards LP
+HarbourVest Partners LLC",Goldman Sachs,3,171837.00,NA,38.234,61.735,22.7,28.571,13.607,0.220409816,93.922,86.91,108.07%,0.092173115,28.799999,0.1,13.75
+4,3/31/09,5/21/09,OpenTable Inc,Pvd online reservation svcs,United States,OPEN,60.00,60.00,20.00,Common Shares,Yes,"Draper Richards LP
 Venture Frogs LLC
 Undisclosed Firm
 Draper Richards LP
@@ -70,8 +70,8 @@ Impact Venture Inc
 Benchmark Capital
 Prescient Capital LLC
 Impact Venture Inc
-Benchmark Capital",Bank of America,2,"110,398.1",NA,29.36,41.3,11.3,41,-0.15,-0.36%,0,48,0.00%,30,26,0.048789103,31.35,45.00%,29
-5,3/31/09,6/24/09,Medidata Solutions Inc,Pvd clinical dvlp solutions,United States,MDSO,88.2,88.2,14,Common Shares,Yes,"Tribeca Venture Partners LLC
+Benchmark Capital",Bank of America,2,110398.10,NA,29.36,41.3,11.3,41,-0.15,-0.003631961,0,51.50,0.00%,0.048789103,31.35,0.45,29
+5,3/31/09,6/24/09,Medidata Solutions Inc,Pvd clinical dvlp solutions,United States,MDSO,88.20,88.20,14.00,Common Shares,Yes,"Tribeca Venture Partners LLC
 Globalnet Management LLC
 Stonehenge Capital Company, LLC
 Lambda Fund Management Inc
@@ -82,8 +82,8 @@ Tribeca Venture Partners LLC
 Milestone Venture Partners
 Stonehenge Capital Company, LLC
 Globalnet Management LLC
-Lambda Fund Management Inc",Citigroup,2,"21,699.9",NA,34.678,54.5,18.1,52.3,-8.04,-14.75%,14.45,69,18.15%,7.5,15.05,-0.012924425,29.049999,19.29%,16.7
-6,6/30/09,6/30/09,LogMeIn Inc,Develop software solutions,United States,LOGM,106.667,106.7,16,Common Shares,Yes,"Undisclosed Firm
+Lambda Fund Management Inc",Citigroup,2,21699.90,NA,34.678,54.5,18.1,52.3,-8.04,-0.147522936,14.45,79.60,18.15%,-0.012924425,29.049999,0.192857143,16.7
+6,6/30/09,6/30/09,LogMeIn Inc,Develop software solutions,United States,LOGM,106.67,106.70,16.00,Common Shares,Yes,"Undisclosed Firm
 Integral Capital Partners
 Prism Ventureworks
 3TS Capital Partners, Ltd.
@@ -106,8 +106,8 @@ Prism Ventureworks
 Integral Capital Partners
 3TS Capital Partners, Ltd.
 Undisclosed Firm
-Undisclosed Firm",JP Morgan,1,"4,380,204.8",NA,26.998,51.723,8.45,51.139,-5.402,12.38%,0,46,0.00%,24.5,19.92,-0.029756253,26.35,25.13%,20.02
-7,12/31/08,9/23/09,A123 Systems Inc,"Mnfr,whl lithium-ion batteries",United States,AONE,380.437,380.4,13.5,Common Shares,Yes,"Boston University Technology Development Fund
+Undisclosed Firm",JP Morgan,1,4380204.80,NA,26.998,51.723,8.45,51.139,-5.402,-0.104440964,0,47.20,0.00%,-0.029756253,26.35,0.25125,20.02
+7,12/31/08,9/23/09,A123 Systems Inc,"Mnfr,whl lithium-ion batteries",United States,AONE,380.44,380.40,13.50,Common Shares,Yes,"Boston University Technology Development Fund
 AllianceBernstein LP
 GE Commercial Finance - Equity
 Qualcomm Ventures
@@ -175,12 +175,12 @@ Undisclosed Firm
 Armilar Venture Partners Sociedade de Capital de Risco SA
 Novus Ventures
 YankeeTek Ventures
-YankeeTek Ventures",Morgan Stanley,1,"246,172.3",NA,28.346,41.349,4.3,30.884,-30.97,-87.24%,5.22,57,0.86%,14,15.39,0.031274291,23.49,50.30%,20.29
-8,9/30/09,10/1/09,Echo Global Logistics Inc,Pvd transp management svcs,United States,ECHO,79.8,79.8,14,Common Shares,Yes,"Undisclosed Firm
+YankeeTek Ventures",Morgan Stanley,1,246172.30,NA,28.346,41.349,4.3,30.884,-30.97,-0.748990302,5.22,610.10,0.86%,0.031274291,23.49,0.502962963,20.29
+8,9/30/09,10/1/09,Echo Global Logistics Inc,Pvd transp management svcs,United States,ECHO,79.80,79.80,14.00,Common Shares,Yes,"Undisclosed Firm
 Undisclosed Firm
 New Enterprise Associates Inc
-Undisclosed Firm",Morgan Stanley,1,"17,400.0",NA,95.461,202.8,0,38.15,2.88,1.42%,10.21,71,12.73%,-7.79,12.91,0.027644751,28.27,0.43%,14.06
-9,9/30/09,11/17/09,Fortinet Inc,Mnfr computer security hardwar,United States,FTNT,156.25,156.3,12.5,Common Shares,Yes,"Undisclosed Firm
+Undisclosed Firm",Morgan Stanley,1,17400.00,NA,95.461,202.8,NA,38.15,2.88,0.014201183,10.21,80.20,12.73%,0.027644751,28.27,0.004285714,14.06
+9,9/30/09,11/17/09,Fortinet Inc,Mnfr computer security hardwar,United States,FTNT,156.25,156.30,12.50,Common Shares,Yes,"Undisclosed Firm
 Defta Venture Partners LLC
 Redpoint Ventures
 Redpoint Ventures
@@ -191,8 +191,8 @@ Meritech Capital Partners
 WI Harper Group Inc
 DCM Ventures
 Meritech Capital Partners
-Redpoint Ventures",Morgan Stanley,1,"83,650.0",NA,155.366,211.8,87.7,141.39,1.89,0.89%,0,26,0.00%,34,16.75,0.014117816,22.41,-33.52%,8.31
-10,6/30/09,2/10/10,QuinStreet Inc,Pvd online marketing services,United States,QNST,150,150,15,Common Shares,Yes,"Sutter Hill Ventures
+Redpoint Ventures",Morgan Stanley,1,83650.00,NA,155.366,211.8,87.7,141.39,1.89,0.008923513,0,230.50,0.00%,0.014117816,22.41,-0.3352,8.31
+10,6/30/09,2/10/10,QuinStreet Inc,Pvd online marketing services,United States,QNST,150.00,150.00,15.00,Common Shares,Yes,"Sutter Hill Ventures
 Undisclosed Firm
 Rosewood Capital LLC
 Leland Stanford Junior University
@@ -209,8 +209,8 @@ Venture Strategy Partners LP
 St Paul Venture Capital Inc
 Rosewood Capital LLC
 J & W Seligman and Co Inc
-Undisclosed Firm",Credit Suisse,3,"59,000.1",NA,192.03,260.5,16.15,44.21,17.27,6.63%,12.89,25,6.10%,-29.13,10.63,-0.067288423,25.4,0.00%,15
-11,12/31/09,3/15/10,Financial Engines Inc,Pvd invest mgmt svcs,United States,FNGN,127.2,127.2,12,Common Shares,Yes,"Amerindo Investment Advisors Inc
+Undisclosed Firm",Credit Suisse,3,59000.10,NA,192.03,260.5,16.15,44.21,17.27,0.066295585,12.89,211.40,6.10%,-0.067288423,25.4,0,15
+11,12/31/09,3/15/10,Financial Engines Inc,Pvd invest mgmt svcs,United States,FNGN,127.20,127.20,12.00,Common Shares,Yes,"Amerindo Investment Advisors Inc
 Foundation Capital LLC
 HLM Management Co LLC
 CROPS Inc (Pre-Reincorporation)
@@ -255,12 +255,12 @@ Undisclosed Firm
 Charter Venture Capital
 Financial Technology Ventures
 Foundation Capital LLC
-Goldman Sachs & Co LLC",Goldman Sachs,1,"139,600.0",NA,71.271,85,22.52,78.2,5.69,6.69%,8.06,52,13.80%,15.75,13.89,0.052396575,18,43.75%,17.25
-12,12/31/09,3/23/10,MaxLinear Inc,Pvd semiconductor solutions,United States,MXL,90.217,90.2,14,Common Shares,Yes,"Undisclosed Firm
+Goldman Sachs & Co LLC",Goldman Sachs,1,139600.00,NA,71.271,85,22.52,78.2,5.69,0.066941176,8.06,58.40,13.80%,0.052396575,18,0.4375,17.25
+12,12/31/09,3/23/10,MaxLinear Inc,Pvd semiconductor solutions,United States,MXL,90.22,90.20,14.00,Common Shares,Yes,"Undisclosed Firm
 U.S. Venture Partners
 U.S. Venture Partners
-Mission Ventures Inc",Morgan Stanley,1,"33,000.0",NA,9.696,31.33,NA,20.67,-1.91,-6.10%,0.27,79,0.27%,-12.07,12.31,0.056225259,16.35,30.71%,18.3
-13,12/31/09,3/24/10,Calix Inc,Pvd broadband commun svcs,United States,CALX,82.276,82.3,13,Common Shares,Yes,"Foundation Capital LLC
+Mission Ventures Inc",Morgan Stanley,1,33000.00,NA,9.696,31.33,NA,20.67,-1.91,-0.060963932,0.27,99.00,0.27%,0.056225259,16.35,0.307142857,18.3
+13,12/31/09,3/24/10,Calix Inc,Pvd broadband commun svcs,United States,CALX,82.28,82.30,13.00,Common Shares,Yes,"Foundation Capital LLC
 Credit Suisse Group AG
 Undisclosed Firm
 Riverwood Capital Group LLC
@@ -293,9 +293,8 @@ Azure Capital Partners, L.P.
 Azure Capital Partners, L.P.
 Meritech Capital Partners
 Meritech Capital Partners
-Meritech Capital Partners",Goldman Sachs,3,"272,505.8",NA,193.819,250.46,31.63,91.97,-12.92,-5.16%,21,68,2.74%,-4.08,12.47,0.051097443,17.549999,9.62%,14.25
-14,4/2/10,4/21/10,DynaVox Inc,Pvd speech generating tech,United States,DVOX,140.625,140.6,15,Class A Shares,Yes,Vestar Capital Partners LLC,Piper Jaffray,3,,NA,81.438,91.2,28.15,47.36,8.84,9.69%,79.54,17,57.18%,-62.33,5.65,0.034908724,16.32,0.00%,15
-15,3/31/10,5/13/10,TeleNav Inc,"Mnfr search,detection equip",United States,TNAV,56,56,8,Common Shares,Yes,"Undisclosed Firm
+Meritech Capital Partners",Goldman Sachs,3,272505.80,NA,193.819,250.46,31.63,91.97,-12.92,-0.051585083,21,767.10,2.74%,0.051097443,17.549999,0.096153846,14.25
+14,3/31/10,5/13/10,TeleNav Inc,"Mnfr search,detection equip",United States,TNAV,56.00,56.00,8.00,Common Shares,Yes,"Undisclosed Firm
 Undisclosed Firm
 Undisclosed Firm
 Sycamore Ventures Inc
@@ -303,8 +302,8 @@ iGlobe Partners Ltd
 Lehman Brothers Venture Partners LP
 Menlo Ventures
 Sycamore Ventures Inc
-iGlobe Partners Ltd",JP Morgan,1,"37,999.0",NA,48.065,110.88,16.54,48.34,29.62,26.71%,0,6,0.00%,-14.88,6.81,-0.03204543,26.68,15.00%,9.2
-16,3/31/10,5/19/10,ReachLocal Inc,Pvd online marketing services,United States,RLOC,54.167,54.2,13,Common Shares,Yes,"Galleon Group
+iGlobe Partners Ltd",JP Morgan,1,37999.00,NA,48.065,110.88,16.54,48.34,29.62,0.267135642,0,110.10,0.00%,-0.03204543,26.68,0.15,9.2
+15,3/31/10,5/19/10,ReachLocal Inc,Pvd online marketing services,United States,RLOC,54.17,54.20,13.00,Common Shares,Yes,"Galleon Group
 Global Founders Capital Management GmbH
 Global Founders Capital Management GmbH
 Rho Capital Partners Inc
@@ -315,8 +314,8 @@ Undisclosed Firm
 Rho Capital Partners Inc
 Vantagepoint Management Inc
 Vantagepoint Management Inc
-Undisclosed Firm",JP Morgan,1,"77,718.1",NA,68.356,146.69,61.05,76.12,-7,-4.77%,0,5,0.00%,52.38,19.81,-0.067189685,35.32,0.00%,13
-17,3/31/10,6/16/10,BroadSoft Inc,Dvlp telecommun software,United States,BSFT,67.5,67.5,9,Common Shares,Yes,"Charles River Ventures LLC
+Undisclosed Firm",JP Morgan,1,77718.10,NA,68.356,146.69,61.05,76.12,-7,-0.047719681,0,101.50,0.00%,-0.067189685,35.32,0,13
+16,3/31/10,6/16/10,BroadSoft Inc,Dvlp telecommun software,United States,BSFT,67.50,67.50,9.00,Common Shares,Yes,"Charles River Ventures LLC
 Crescendo Venture Management LLP
 Charles River Ventures LLC
 Bessemer Venture Partners
@@ -363,8 +362,8 @@ Crescendo Venture Management LLP
 Meritech Capital Partners
 Mayfield Fund LLC
 Comcast Ventures
-Undisclosed Firm",Goldman Sachs,1,"80,000.2",NA,61.829,68.887,28.53,56.56,-7.85,-20.69%,18.67,64,27.34%,187.11,25.84,-0.017463783,25.92,-7.78%,8.3
-18,6/30/10,7/15/10,Qlik Technologies Inc,Dvlp software solutions,United States,QLIK,112,112,10,Common Shares,Yes,"JVP Jerusalem Venture Partners Israel Management Ltd
+Undisclosed Firm",Goldman Sachs,1,80000.20,NA,61.829,68.887,28.53,56.56,-7.85,-0.113954737,18.67,68.30,27.34%,-0.017463783,25.92,-0.077777778,8.3
+17,6/30/10,7/15/10,Qlik Technologies Inc,Dvlp software solutions,United States,QLIK,112.00,112.00,10.00,Common Shares,Yes,"JVP Jerusalem Venture Partners Israel Management Ltd
 Undisclosed Firm
 Thoma Bravo LLC
 Thoma Bravo LLC
@@ -372,8 +371,8 @@ Undisclosed Firm
 Undisclosed Firm
 Thoma Bravo LLC
 Thoma Bravo LLC
-Accel Partners & Co Inc",Morgan Stanley,2,"12,500.0",NA,118.264,157.359,93.35,127.09,6.86,6.87%,3.78,80,3.80%,157.9,25.79,-0.020714286,25.139999,28.00%,12.8
-19,6/30/10,7/21/10,Green Dot Corp,Pvd prepaid debit cards svcs,United States,GDOT,164.09,164.1,36,Class A Shares,Yes,"Fairmont Capital Inc
+Accel Partners & Co Inc",Morgan Stanley,2,12500.00,NA,118.264,157.359,93.35,127.09,6.86,0.043594583,3.78,99.40,3.80%,-0.020714286,25.139999,0.28,12.8
+18,6/30/10,7/21/10,Green Dot Corp,Pvd prepaid debit cards svcs,United States,GDOT,164.09,164.10,36.00,Class A Shares,Yes,"Fairmont Capital Inc
 Sequoia Capital Operations LLC
 Undisclosed Firm
 TTV Capital LLC
@@ -389,8 +388,8 @@ Sequoia Capital Operations LLC
 Undisclosed Firm
 Technology Crossover Ventures LP
 TTV Capital LLC
-TTV Capital LLC",JP Morgan,1,"79,922.7",NA,168.126,234.82,75.79,171.15,37.16,15.82%,0,24,0.00%,71.19,61.63,-0.038955245,25.639999,22.19%,43.990002
-20,6/30/10,8/11/10,RealPage Inc,Dvlp property mgmt software,United States,RP,135.3,135.3,11,Common Shares,Yes,"Apax Partners LLP
+TTV Capital LLC",JP Morgan,1,79922.70,NA,168.126,234.82,75.79,171.15,37.16,0.158248871,0,192.90,0.00%,-0.038955245,25.639999,0.2219445,43.990002
+19,6/30/10,8/11/10,RealPage Inc,Dvlp property mgmt software,United States,RP,135.30,135.30,11.00,Common Shares,Yes,"Apax Partners LLP
 Undisclosed Firm
 Apax Partners LLP
 Camden Partners Holdings LLC
@@ -403,8 +402,8 @@ Camden Partners Holdings LLC
 Seren Capital Ltd
 Leeds Equity Advisors Inc
 Camden Partners Holdings LLC
-Camden Partners Holdings LLC",Credit Suisse,1,"47,923.0",NA,112.568,140.9,27.8,75.46,28.43,20.18%,61.86,18,43.53%,149.64,27.46,0.011756031,25.389999,32.00%,14.52
-21,9/30/10,11/10/10,Inphi Corp,"Mnfr,whl semiconductors",United States,IPHI,81.6,81.6,12,Common Shares,Yes,"Undisclosed Firm
+Camden Partners Holdings LLC",Credit Suisse,1,47923.00,NA,112.568,140.9,27.8,75.46,28.43,0.201774308,61.86,142.10,43.53%,0.011756031,25.389999,0.32,14.52
+20,9/30/10,11/10/10,Inphi Corp,"Mnfr,whl semiconductors",United States,IPHI,81.60,81.60,12.00,Common Shares,Yes,"Undisclosed Firm
 KeyNote Ventures LLC
 Mayfield Fund LLC
 Tallwood Venture Capital
@@ -431,8 +430,8 @@ Undisclosed Firm
 Tallwood Venture Capital
 Flex Ltd
 Undisclosed Firm
-Mayfield Fund LLC",Morgan Stanley,2,"80,354.1",NA,42.954,58.85,7.7,29.5,7.33,12.46%,0,54,0.00%,70.33,20.44,0.046720925,18.469999,22.75%,14.73
-22,12/31/09,12/14/10,FleetCor Technologies Inc,Provide card payment services,United States,FLT,291.525,291.5,23,Common Shares,Yes,"Summit Partners LP
+Mayfield Fund LLC",Morgan Stanley,2,80354.10,NA,42.954,58.85,7.7,29.5,7.33,0.124553951,0,60.80,0.00%,0.046720925,18.469999,0.2275,14.73
+21,12/31/09,12/14/10,FleetCor Technologies Inc,Provide card payment services,United States,FLT,291.53,291.50,23.00,Common Shares,Yes,"Summit Partners LP
 HarbourVest Partners LLC
 Intel Capital Corp
 Summit Partners LP
@@ -463,8 +462,8 @@ Undisclosed Firm
 Summit Partners LP
 Undisclosed Firm
 Chestnut Hill Ventures LLC
-Bain Capital LP",JP Morgan,3,"240,999.9",NA,256.761,354.1,30.58,208.06,89.05,25.15%,0,3,0.00%,30.48,30.01,0.038656994,17.610001,18.48%,27.25
-23,12/31/10,2/1/11,NeoPhotonics Corp,Mnfr integrated circuit,United States,NPTN,82.5,82.5,11,Common Shares,Yes,"Techno Venture Co Ltd
+Bain Capital LP",JP Morgan,3,240999.90,NA,256.761,354.1,30.58,208.06,89.05,0.251482632,0,1209.50,0.00%,0.038656994,17.610001,0.184782609,27.25
+22,12/31/10,2/1/11,NeoPhotonics Corp,Mnfr integrated circuit,United States,NPTN,82.50,82.50,11.00,Common Shares,Yes,"Techno Venture Co Ltd
 Nth Power LLC
 Oak Investment Partners
 Crossroads Liquidating Trust
@@ -545,8 +544,8 @@ Oak Investment Partners
 Oak Investment Partners
 Oak Investment Partners
 Oak Investment Partners
-Undisclosed Firm",Bank of America,1,"290,017.5",NA,133.989,155.06,9.59,44.67,-6.85,-4.42%,2.11,23,1.22%,-33.27,7.34,0.029043699,17.629999,20.45%,13.25
-24,3/31/11,4/14/11,Ellie Mae Inc,Dvlp mortgage mgmt software,United States,ELLI,45,45,6,Common Shares,Yes,"H&Q Asia Pacific, Ltd.
+Undisclosed Firm",Bank of America,1,290017.50,NA,133.989,155.06,9.59,44.67,-6.85,-0.044176448,2.11,172.50,1.22%,0.029043699,17.629999,0.204545455,13.25
+23,3/31/11,4/14/11,Ellie Mae Inc,Dvlp mortgage mgmt software,United States,ELLI,45.00,45.00,6.00,Common Shares,Yes,"H&Q Asia Pacific, Ltd.
 Federal National Mortgage Association
 RS Investment Trust
 Undisclosed Firm
@@ -568,8 +567,8 @@ GKM VENTURE PARTNERS L P
 Undisclosed Firm
 Thoma Bravo LLC
 Undisclosed Firm
-Thoma Bravo LLC",Goldman Sachs,5,"48,499.9",NA,33.573,37.71,7.53,23.96,1.66,4.40%,0,61,0.00%,-12.67,5.24,0.023335408,16.27,12.83%,6.77
-25,3/31/11,4/20/11,Responsys Inc,Dvlp email mktg software,United States,MKTG,79.436,79.4,12,Common Shares,Yes,"Accel Partners & Co Inc
+Thoma Bravo LLC",Goldman Sachs,5,48499.90,NA,33.573,37.71,7.53,23.96,1.66,0.044020154,0,64.00,0.00%,0.023335408,16.27,0.128333333,6.77
+24,3/31/11,4/20/11,Responsys Inc,Dvlp email mktg software,United States,MKTG,79.44,79.40,12.00,Common Shares,Yes,"Accel Partners & Co Inc
 Foundation Capital LLC
 Undisclosed Firm
 Accel Partners & Co Inc
@@ -593,8 +592,8 @@ Foundation Capital LLC
 Lighthouse Capital Partners  LP
 Foundation Capital LLC
 Sigma Partners
-RB Webber and Comapny Inc",Morgan Stanley,1,"62,400.0",NA,66.643,94.07,20.85,39.67,8.6,9.14%,0,65,0.00%,-8.5,10.98,0.025897956,15.07,28.33%,15.4
-26,3/31/11,5/3/11,Boingo Wireless Inc,Pvd wireless Internet svcs,United States,WIFI,77.895,77.9,13.5,Common Shares,Yes,"New Enterprise Associates Inc
+RB Webber and Comapny Inc",Morgan Stanley,1,62400.00,NA,66.643,94.07,20.85,39.67,8.6,0.091421282,0,72.60,0.00%,0.025897956,15.07,0.283333333,15.4
+25,3/31/11,5/3/11,Boingo Wireless Inc,Pvd wireless Internet svcs,United States,WIFI,77.90,77.90,13.50,Common Shares,Yes,"New Enterprise Associates Inc
 Undisclosed Firm
 Undisclosed Firm
 New Enterprise Associates Inc
@@ -609,8 +608,8 @@ New Enterprise Associates Inc
 Mitsui & Co. Global Investment, Ltd.
 Sternhill Partners I LP
 Evercore Inc
-Undisclosed Firm",Credit Suisse,3,"99,800.0",NA,56.711,65.72,5.9,63.43,1.42,2.16%,0,13,0.00%,-43.33,7.65,0.018535203,16.700001,-10.37%,12.1
-27,3/31/11,5/18/11,LinkedIn Corp,Pvd online networking services,United States,LNKD,352.8,352.8,45,Class A Shares,Yes,"Bessemer Venture Partners
+Undisclosed Firm",Credit Suisse,3,99800.00,NA,56.711,65.72,5.9,63.43,1.42,0.021606817,0,127.30,0.00%,0.018535203,16.700001,-0.103703704,12.1
+26,3/31/11,5/18/11,LinkedIn Corp,Pvd online networking services,United States,LNKD,352.80,352.80,45.00,Class A Shares,Yes,"Bessemer Venture Partners
 Sequoia Capital Operations LLC
 Sequoia Capital Operations LLC
 Greylock Partners LLC
@@ -631,8 +630,8 @@ Sapphire Ventures LLC
 Goldman Sachs & Co LLC
 Bessemer Venture Partners
 Mcgraw-Hill Ventures Inc
-Bessemer Venture Partners",Morgan Stanley,2,"235,160.9",NA,120.127,243.1,58.98,223.52,15.39,6.33%,0,30,0.00%,66.36,74.86,0.029105416,16.23,109.44%,94.25
-28,3/31/11,5/26/11,Solazyme Inc,"Prod,whl renewable oil",United States,SZYM,197.55,197.6,18,Common Shares,Yes,"New Enterprise Associates Inc
+Bessemer Venture Partners",Morgan Stanley,2,235160.90,NA,120.127,243.1,58.98,223.52,15.39,0.063307281,0,265.30,0.00%,0.029105416,16.23,1.094444444,94.25
+27,3/31/11,5/26/11,Solazyme Inc,"Prod,whl renewable oil",United States,SZYM,197.55,197.60,18.00,Common Shares,Yes,"New Enterprise Associates Inc
 Pelion Venture Partners
 Dell Ventures LP
 Iron Capital Partners
@@ -653,10 +652,8 @@ Andreessen Horowitz LLC
 Undisclosed Firm
 New Enterprise Associates Inc
 Meritech Capital Partners
-Pelion Venture Partners",Morgan Stanley,1,"115,136.1",NA,9.161,37.97,NA,51.65,-16.28,-42.88%,0.18,75,0.21%,-35.06,11.69,-0.013279866,16.09,23.89%,22.3
-29,3/31/11,6/8/11,Fusion-io Inc,Dvlp storage memory software,United States,FIO,233.7,233.7,19,Common Shares,Yes,,Goldman Sachs,3,,NA,10.15,36.22,23.39,51.75,-31.72,-87.58%,11.31,74,13.21%,53.79,29.22,-0.04676368,18.790001,18.42%,22.5
-30,9/30/11,10/13/11,Ubiquiti Networks Inc,"Mnfr,whl communications equip",United States,UBNT,105.573,105.6,15,Common Shares,Yes,Summit Partners LP,UBS,1,,NA,63.121,136.95,NA,49.87,-5.46,-3.99%,0,10,0.00%,116.13,32.42,0.023526449,30.700001,16.67%,17.5
-31,09/30/11,11/03/11,Groupon Inc,Pvd online mktg svcs,United States,GRPN,700.0,700.0,20.0,Class A Shares,Yes,"Tiger Global Management LLC
+Pelion Venture Partners",Morgan Stanley,1,115136.10,NA,9.161,37.97,NA,51.65,-16.28,-0.428759547,0.18,86.70,0.21%,-0.013279866,16.09,0.238888889,22.3
+28,9/30/11,11/3/11,Groupon Inc,Pvd online mktg svcs,United States,GRPN,700.00,700.00,20.00,Class A Shares,Yes,"Tiger Global Management LLC
 Undisclosed Firm
 Undisclosed Firm
 New Enterprise Associates Inc
@@ -695,8 +692,8 @@ Accel Partners & Co Inc
 Undisclosed Firm
 Accel Partners & Co Inc
 New Enterprise Associates Inc
-Maveron LLC",,,"322,372.9",,,,,,,,,,,,,,,,
-32,3/28/10,11/15/11,InvenSense Inc,Dvlp motion sensing software,United States,INVN,75,75,7.5,Common Shares,Yes,"Artiman Management LLC
+Maveron LLC",Morgan Stanley,2,322372.90,NA,30.471,713.365,233.913,700.298,-413.386,-0.579487359,0,381.57,0.00%,0.123820585,30.5,0.30550005,26.110001
+29,3/28/10,11/15/11,InvenSense Inc,Dvlp motion sensing software,United States,INVN,75.00,75.00,7.50,Common Shares,Yes,"Artiman Management LLC
 Partech Partners
 SkyLake Investment & Co
 Undisclosed Firm
@@ -713,8 +710,8 @@ VentureTech Alliance Holdings LLC
 Partech Partners
 Qualcomm Ventures
 Sierra Ventures Management LLC
-DOCOMO Innovations Inc",Goldman Sachs,1,"53,000.4",NA,79.556,96.55,NA,31.42,9.35,9.68%,0.02,50,0.04%,53.07,11.48,0.048656732,31.219999,18.67%,8.9
-33,09/30/11,12/15/11,Zynga Inc,Pvd online social gaming svcs,United States,ZNGA,1000.0,1000.0,10.0,Class A Shares,Yes,"Institutional Venture Partners
+DOCOMO Innovations Inc",Goldman Sachs,1,53000.40,NA,79.556,96.55,NA,31.42,9.35,0.096841015,0.02,54.50,0.04%,0.048656732,31.219999,0.186666667,8.9
+30,9/30/11,12/15/11,Zynga Inc,Pvd online social gaming svcs,United States,ZNGA,1000.00,1000.00,10.00,Class A Shares,Yes,"Institutional Venture Partners
 Institutional Venture Partners
 Foundry Group LLC
 Kleiner Perkins
@@ -759,8 +756,8 @@ Silver Lake Partners LP
 Undisclosed Firm
 Institutional Venture Partners
 Andreessen Horowitz LLC
-Undisclosed Firm",,,"873,912.3",,,,,,,,,,,,,,,,
-34,10/31/11,1/24/12,Guidewire Software Inc,Pvd core system software svcs,United States,GWRE,115.05,115.1,13,Common Shares,Yes,"Bay Partners
+Undisclosed Firm",Morgan Stanley,1,873912.30,NA,121.467,597.459,114.165,471.987,90.595,0.151633836,0,1112.57,0.00%,-0.030932756,25.110001,-0.05,9.5
+31,10/31/11,1/24/12,Guidewire Software Inc,Pvd core system software svcs,United States,GWRE,115.05,115.10,13.00,Common Shares,Yes,"Bay Partners
 Bay Partners
 U.S. Venture Partners
 Bay Partners
@@ -772,8 +769,8 @@ U.S. Venture Partners
 Bay Partners
 Bay Partners
 Battery Ventures LP
-Battery Ventures LP",JP Morgan,2,"24,193.0",NA,144.691,172.47,28.95,97.26,35.56,20.62%,0,72,0.00%,96,25.48,0.039291715,18.91,31.69%,17.120001
-35,12/31/11,2/9/12,Synacor Inc,Dvlp Internet software,United States,SYNC,34.091,34.1,5,Common Shares,Yes,"Rand Capital Corp
+Battery Ventures LP",JP Morgan,2,24193.00,NA,144.691,172.47,28.95,97.26,35.56,0.206180785,0,80.70,0.00%,0.039291715,18.91,0.316923154,17.120001
+32,12/31/11,2/9/12,Synacor Inc,Dvlp Internet software,United States,SYNC,34.09,34.10,5.00,Common Shares,Yes,"Rand Capital Corp
 Rand Capital Corp
 Undisclosed Firm
 Undisclosed Firm
@@ -812,11 +809,11 @@ Intel Capital Corp
 Rand Capital Corp
 Pliant Corp
 Undisclosed Firm
-Undisclosed Firm",Bank of America,2,"54,030.3",NA,60.798,66.23,6.21,69.57,-3.59,-5.42%,0,45,0.00%,98.6,9.93,0.048245921,18.629999,24.40%,6.22
-36,12/31/11,2/23/12,Proto Labs Inc,Mnfr prototype plastic parts,United States,PRLB,68.8,68.8,16,Common Shares,Yes,"Undisclosed Firm
+Undisclosed Firm",Bank of America,2,54030.30,NA,60.798,66.23,6.21,69.57,-3.59,-0.054205043,0,40.80,0.00%,0.048245921,18.629999,0.244,6.22
+33,12/31/11,2/23/12,Proto Labs Inc,Mnfr prototype plastic parts,United States,PRLB,68.80,68.80,16.00,Common Shares,Yes,"Undisclosed Firm
 Undisclosed Firm
-North Bridge Venture Partners LP",Morgan Stanley,1,"69,740.0",NA,64.919,98.94,15.75,32.75,17.97,18.16%,0.61,58,0.98%,106.25,33,0.039327535,16.799999,81.25%,29
-37,12/31/11,3/28/12,CafePress Inc,"Own,op e-commerce platform",United States,PRSS,85.5,85.5,19,Common Shares,Yes,"Institutional Venture Partners
+North Bridge Venture Partners LP",Morgan Stanley,1,69740.00,NA,64.919,98.94,15.75,32.75,17.97,0.181625227,0.61,62.30,0.98%,0.039327535,16.799999,0.8125,29
+34,12/31/11,3/28/12,CafePress Inc,"Own,op e-commerce platform",United States,PRSS,85.50,85.50,19.00,Common Shares,Yes,"Institutional Venture Partners
 Undisclosed Firm
 PacRim Venture Partners
 Staenberg Venture Partners
@@ -825,8 +822,8 @@ Undisclosed Firm
 PacRim Venture Partners
 Undisclosed Firm
 Sequoia Capital Operations LLC
-Sequoia Capital Operations LLC",JP Morgan,2,"23,800.1",NA,103.493,127.93,26.46,51.18,2.72,2.13%,0.05,76,0.06%,-51.05,9.3,0.024132378,15.47,17.00%,22.23
-38,3/31/12,4/19/12,Proofpoint Inc,Dvlp email sec software,United States,PFPT,82.282,82.3,13,Common Shares,Yes,"Leland Stanford Junior University
+Sequoia Capital Operations LLC",JP Morgan,2,23800.10,NA,103.493,127.93,26.46,51.18,2.72,0.021261627,0.05,86.90,0.06%,0.024132378,15.47,0.17,22.23
+35,3/31/12,4/19/12,Proofpoint Inc,Dvlp email sec software,United States,PFPT,82.28,82.30,13.00,Common Shares,Yes,"Leland Stanford Junior University
 Bridgescale Partners LP
 Benchmark Capital
 Undisclosed Firm
@@ -864,8 +861,8 @@ Rre Ventures LLC
 Rre Ventures LLC
 Redwood Partners Ltd
 Rre Ventures LLC
-Lighthouse Capital Partners  LP",Credit Suisse,1,"102,492.3",NA,64.79,81.84,42.68,71.69,-20.14,-24.61%,4.53,62,7.00%,4.85,13.63,-0.019367708,18.360001,8.31%,14.08
-39,3/31/12,5/17/12,Facebook Inc,Internet Service Providers,United States,FB,"16,006.88",16006.9,38,Class A Shares,Yes,"Greylock Partners LLC
+Lighthouse Capital Partners  LP",Credit Suisse,1,102492.30,NA,64.79,81.84,42.68,71.69,-20.14,-0.246089932,4.53,64.70,7.00%,-0.019367708,18.360001,0.083076923,14.08
+36,3/31/12,5/17/12,Facebook Inc,Internet Service Providers,United States,FB,16006.88,16006.90,38.00,Class A Shares,Yes,"Greylock Partners LLC
 Hercules Capital Inc
 Undisclosed Firm
 Accel Partners & Co Inc
@@ -895,8 +892,8 @@ Technology Crossover Ventures LP
 Technology Crossover Ventures LP
 Greylock Partners LLC
 Accel Partners & Co Inc
-Founders Fund, The",Morgan Stanley,2,"2,181,308.0",NA,1974,3711,427,1955,1000,26.95%,0,53,0.00%,-41.16,22.36,-0.059102681,24.49,0.61%,38.23
-40,4/30/12,7/19/12,Palo Alto Networks Inc,Computer Systems Design Services,United States,PANW,260.4,260.4,42,Common Shares,Yes,"Warner Media, LLC.
+Founders Fund, The",Morgan Stanley,2,2181308.00,NA,1974,3711,427,1955,1000,0.269469146,0,6859.00,0.00%,-0.059102681,24.49,0.006052632,38.23
+37,4/30/12,7/19/12,Palo Alto Networks Inc,Computer Systems Design Services,United States,PANW,260.40,260.40,42.00,Common Shares,Yes,"Warner Media, LLC.
 General Catalyst Partners LLC
 Oak Investment Partners
 Institutional Venture Partners
@@ -918,8 +915,8 @@ Sequoia Capital Operations LLC
 General Catalyst Partners LLC
 General Catalyst Partners LLC
 Sequoia Capital Operations LLC
-Accel Partners & Co Inc",Morgan Stanley,2,"228,422.0",NA,48.782,118.6,62.25,96.73,-12.53,-10.56%,0,21,0.00%,30.36,54.75,0.014959462,15.45,26.50%,53.130001
-41,6/30/12,7/19/12,KAYAK Software Corp,Pvd online travel info svc,United States,KYAK,91,91,26,Class A Shares,Yes,"Lehman Brothers Venture Partners LP
+Accel Partners & Co Inc",Morgan Stanley,2,228422.00,NA,48.782,118.6,62.25,96.73,-12.53,-0.105649241,0,166.50,0.00%,0.014959462,15.45,0.265000024,53.130001
+38,6/30/12,7/19/12,KAYAK Software Corp,Pvd online travel info svc,United States,KYAK,91.00,91.00,26.00,Class A Shares,Yes,"Lehman Brothers Venture Partners LP
 Sequoia Capital Operations LLC
 Greylock Partners LLC
 Greylock Partners LLC
@@ -937,8 +934,8 @@ Globespan Capital Partners
 Globespan Capital Partners
 Lehman Brothers Venture Partners LP
 Greylock Partners LLC
-Sequoia Capital Operations LLC",Morgan Stanley,1,"64,400.2",NA,112.698,128.28,69.14,113.21,6.16,4.80%,0,33,0.00%,55.65,40.47,0.014959462,15.45,27.62%,33.18
-42,5/31/12,7/25/12,E2open Inc,Pvd software solution,United States,EOPN,70.313,70.3,15,Common Shares,Yes,"Crossmark Capital
+Sequoia Capital Operations LLC",Morgan Stanley,1,64400.20,NA,112.698,128.28,69.14,113.21,6.16,0.048019956,0,299.10,0.00%,0.014959462,15.45,0.276153846,33.18
+39,5/31/12,7/25/12,E2open Inc,Pvd software solution,United States,EOPN,70.31,70.30,15.00,Common Shares,Yes,"Crossmark Capital
 Undisclosed Firm
 Undisclosed Firm
 Insight Venture Management LLC
@@ -973,8 +970,8 @@ Invesco Private Capital Inc
 Seagate Technology LLC
 Undisclosed Firm
 Undisclosed Firm
-Insight Venture Management LLC",Bank of America,0,"389,649.9",NA,44.377,55.523,12.76,29.28,6.64,16.84%,1.67,32,5.62%,19.53,17.93,0.020103563,19.34,-9.33%,13.6
-43,6/30/12,8/2/12,Globus Medical Inc,"Mnfr medical device,instrument",United States,GMED,100,100,12,Class A Shares,Yes,"Undisclosed Firm
+Insight Venture Management LLC",Bank of America,0,389649.90,NA,44.377,55.523,12.76,29.28,6.64,0.11959008,1.67,29.70,5.62%,0.020103563,19.34,-0.093333333,13.6
+40,6/30/12,8/2/12,Globus Medical Inc,"Mnfr medical device,instrument",United States,GMED,100.00,100.00,12.00,Class A Shares,Yes,"Undisclosed Firm
 Goldman Sachs & Co LLC
 Goldman Sachs & Co LLC
 Sunamerica Ventures
@@ -982,8 +979,8 @@ Goldman Sachs & Co LLC
 Undisclosed Firm
 Blackstone Life Sciences
 Goldman Sachs & Co LLC
-Undisclosed Firm",Bank of America,3,"110,000.0",NA,288.195,331.48,NA,165.32,60.78,18.34%,0,42,0.00%,4.92,12.59,-0.005603704,17.57,12.50%,13.5
-44,9/30/12,10/2/12,LifeLock Inc,Dvlp Internet software,United States,LOCK,141.3,141.3,9,Common Shares,Yes,"Bessemer Venture Partners
+Undisclosed Firm",Bank of America,3,110000.00,NA,288.195,331.48,NA,165.32,60.78,0.183359479,0,367.30,0.00%,-0.005603704,17.57,0.125,13.5
+41,9/30/12,10/2/12,LifeLock Inc,Dvlp Internet software,United States,LOCK,141.30,141.30,9.00,Common Shares,Yes,"Bessemer Venture Partners
 Undisclosed Firm
 Kleiner Perkins
 Bessemer Venture Partners
@@ -1010,8 +1007,8 @@ Institutional Venture Partners
 Crossroads Liquidating Trust
 Undisclosed Firm
 Undisclosed Firm
-Bessemer Venture Partners",Goldman Sachs,2,"213,060.9",NA,162.279,193.95,91.22,126.48,-4.26,-2.20%,49.8,31,17.53%,2.67,9.24,0.024604701,15.71,-3.89%,8.65
-45,9/30/12,11/15/12,Ruckus Wireless Inc,"Mnfr,whl Wi-Fi products",United States,RKUS,126,126,15,Common Shares,Yes,"Undisclosed Firm
+Bessemer Venture Partners",Goldman Sachs,2,213060.90,NA,162.279,193.95,91.22,126.48,-4.26,-0.021964424,49.8,284.10,17.53%,0.024604701,15.71,-0.038888889,8.65
+42,9/30/12,11/15/12,Ruckus Wireless Inc,"Mnfr,whl Wi-Fi products",United States,RKUS,126.00,126.00,15.00,Common Shares,Yes,"Undisclosed Firm
 Mitsui & Co. Global Investment, Ltd.
 Sequoia Capital Operations LLC
 WK Technology Fund
@@ -1043,8 +1040,8 @@ Sequoia Capital Operations LLC
 T Telematik Vntre Holding GmbH
 T Telematik Vntre Holding GmbH
 WK Technology Fund
-WK Technology Fund",Goldman Sachs,1,"74,784.7",NA,75.489,120.02,32.66,66.08,4.19,3.49%,0,12,0.00%,-15.47,12.68,-0.067610255,17.99,-18.33%,12.25
-46,09/30/12,12/12/12,SolarCity Corp,Pvd solar installation svcs,United States,SCTY,92.0,92.0,8.0,Common Shares,Yes,"Soros Strategic Partners LP
+WK Technology Fund",Goldman Sachs,1,74784.70,NA,75.489,120.02,32.66,66.08,4.19,0.034910848,0,123.10,0.00%,-0.067610255,17.99,-0.183333333,12.25
+43,9/30/12,12/12/12,SolarCity Corp,Pvd solar installation svcs,United States,SCTY,92.00,92.00,8.00,Common Shares,Yes,"Soros Strategic Partners LP
 Mayfield Fund LLC
 Undisclosed Firm
 Draper Fisher Jurvetson International Inc
@@ -1075,8 +1072,8 @@ J. F. Shea Co Inc
 Undisclosed Firm
 Undisclosed Firm
 Draper Fisher Jurvetson International Inc
-Pliant Corp",,,"638,284.0",,,,,,,,,,,,,,,,
-47,03/31/13,05/16/13,Tableau Software Inc,Develop prepackaged software,United States,DATA,254.2,254.2,31.0,Class A Shares,Yes,"Vista Equity Partners LLC
+Pliant Corp",Goldman Sachs,2,638284.00,NA,9.684,23.145,42.004,73.668,-73.714,-3.184877943,22.803,1043.38,2.19%,0.037896802,15.95,0.47375,11.79
+44,3/31/13,5/16/13,Tableau Software Inc,Develop prepackaged software,United States,DATA,254.20,254.20,31.00,Class A Shares,Yes,"Vista Equity Partners LLC
 Vista Equity Partners LLC
 InterWest Partners LLC
 InterWest Partners LLC
@@ -1115,12 +1112,12 @@ Institutional Venture Partners
 Institutional Venture Partners
 Sunbridge Partners Inc
 Sunbridge Partners Inc
-Battery Ventures LP",,,"962,687.0",,,,,,,,,,,,,,,,
-48,03/31/13,05/16/13,Marketo Inc,Dvlp Internet software,United States,MKTO,78.8,78.8,13.0,Common Shares,Yes,"New Enterprise Associates Inc
+Battery Ventures LP",Goldman Sachs,1,962687.00,NA,62.36,127.733,63.322,112.84,1.598,0.012510471,0,86.99,0.00%,0.050377942,13.07,0.637096774,50.75
+45,3/31/13,5/16/13,Marketo Inc,Dvlp Internet software,United States,MKTO,78.80,78.80,13.00,Common Shares,Yes,"New Enterprise Associates Inc
 New Enterprise Associates Inc
 Meritech Capital Partners
-Undisclosed Firm",,,"20,080.0",,,,,,,,,,,,,,,,
-49,6/30/13,7/18/13,RetailMeNot Inc,Provide ecommerce services,United States,SALE,190.909,190.9,21,Common Shares,Yes,"Avp Management Services Inc
+Undisclosed Firm",Goldman Sachs,1,20080.00,NA,32.392,58.413,37.776,67.963,-34.385,-0.588653211,3.64,79.16,4.60%,0.050377942,13.07,0.776923077,23.1
+46,6/30/13,7/18/13,RetailMeNot Inc,Provide ecommerce services,United States,SALE,190.91,190.90,21.00,Common Shares,Yes,"Avp Management Services Inc
 Avp Management Services Inc
 Adams Street Partners LLC
 Adams Street Partners LLC
@@ -1148,8 +1145,8 @@ Adams Street Partners LLC
 Undisclosed Firm
 Undisclosed Firm
 Adams Street Partners LLC
-Adams Street Partners LLC",Morgan Stanley,2,"266,249.8",NA,80.402,144.69,40.67,99.19,25.99,17.96%,37.85,44,9.98%,52.33,31.99,0.01888494,13.77,31.90%,27.700001
-50,6/30/13,8/1/13,Control4 Corp,Mnfr wired automation prods,United States,CTRL,64,64,16,Common Shares,Yes,"Thomas Weisel Venture Partners LLC
+Adams Street Partners LLC",Morgan Stanley,2,266249.80,NA,80.402,144.69,40.67,99.19,25.99,0.179625406,37.85,379.30,9.98%,0.01888494,13.77,0.319047667,27.700001
+47,6/30/13,8/1/13,Control4 Corp,Mnfr wired automation prods,United States,CTRL,64.00,64.00,16.00,Common Shares,Yes,"Thomas Weisel Venture Partners LLC
 Foundation Capital LLC
 Foundation Capital LLC
 Foundation Capital LLC
@@ -1180,8 +1177,8 @@ Signal Peak Ventures
 Signal Peak Ventures
 Cisco Systems Inc
 Undisclosed Firm
-Signal Peak Ventures",Bank of America,1,"122,424.9",NA,93.376,109.51,20.18,53.51,-3.72,-3.40%,3.16,49,5.93%,45.75,23.32,0.058619171,12.94,25.00%,20
-51,6/30/13,8/6/13,YuMe Inc,Pvd video advg tech services,United States,YUME,46.125,46.1,9,Common Shares,Yes,"Samsung Venture Investment Corp
+Signal Peak Ventures",Bank of America,1,122424.90,NA,93.376,109.51,20.18,53.51,-3.72,-0.033969501,3.16,53.30,5.93%,0.058619171,12.94,0.25,20
+48,6/30/13,8/6/13,YuMe Inc,Pvd video advg tech services,United States,YUME,46.13,46.10,9.00,Common Shares,Yes,"Samsung Venture Investment Corp
 Translink Capital LLC
 Menlo Ventures
 Samsung Venture Investment Corp
@@ -1223,8 +1220,8 @@ Khosla Ventures LLC
 Menlo Ventures
 e.ventures
 Khosla Ventures LLC
-Accel Partners & Co Inc",Citigroup,1,"60,465.1",NA,68.565,116.74,31.39,46.62,6.27,5.37%,0,73,0.00%,-22.11,7.01,0.035254645,12.72,9.00%,9.81
-52,06/30/13,09/19/13,FireEye Inc,"Dvlp firewall,anti virus",United States,FEYE,303.5,303.5,20.0,Common Shares,Yes,"Norwest Venture Partners
+Accel Partners & Co Inc",Citigroup,1,60465.10,NA,68.565,116.74,31.39,46.62,6.27,0.053709097,0,83.20,0.00%,0.035254645,12.72,0.09,9.81
+49,6/30/13,9/19/13,FireEye Inc,"Dvlp firewall,anti virus",United States,FEYE,303.50,303.50,20.00,Common Shares,Yes,"Norwest Venture Partners
 Sequoia Capital Operations LLC
 Norwest Venture Partners
 Sequoia Capital Operations LLC
@@ -1256,10 +1253,9 @@ Sequoia Capital Operations LLC
 Duff Ackerman & Goodrich LLC
 Silicon Valley Bancventures LP
 Undisclosed Firm
-Sequoia Capital Operations LLC",,,"880,832.5",,,,,,,,,,,,,,,,
-53,7/31/13,10/15/13,Veeva Systems Inc,"Dvlp CRM,content mgmt software",United States,VEEV,260.9,260.9,20,Class A Shares,Yes,,Morgan Stanley,1,,NA,61.262,129.55,19.49,42.5,18.78,14.50%,4.45,7,3.95%,9.5,21.9,-0.00358171,18.66,85.80%,37.16
-54,09/30/13,11/06/13,Twitter Inc,Pvd social networking svcs,United States,TWTR,1820.0,1820.0,26.0,Common Shares,Yes,Emergence Capital Partners LLC,,,"4,000.0",,,,,,,,,,,,,,,,
-55,09/30/13,11/12/13,Chegg Inc,Internet Service Providers,United States,CHGG,187.5,187.5,12.5,Common Shares,Yes,"Undisclosed Firm
+Sequoia Capital Operations LLC",Morgan Stanley,3,880832.50,NA,33.658,83.316,67.562,99.305,-35.756,-0.429161266,1.231,125.27,0.98%,0.043362682,13.16,0.8,36
+50,9/30/13,11/6/13,Twitter Inc,Pvd social networking svcs,United States,TWTR,1820.00,1820.00,26.00,Common Shares,Yes,Emergence Capital Partners LLC,Goldman Sachs,2,4000.00,NA,106.313,316.933,86.551,594.016,-79.399,-0.250522981,0,964.06,0.00%,0.058173597,12.67,0.728461538,44.94
+51,9/30/13,11/12/13,Chegg Inc,Internet Service Providers,United States,CHGG,187.50,187.50,12.50,Common Shares,Yes,"Undisclosed Firm
 Mail.Ru Group Ltd
 Spark Capital LP
 Union Square Ventures LLC
@@ -1315,8 +1311,8 @@ Insight Venture Management LLC
 Undisclosed Firm
 Undisclosed Firm
 Kleiner Perkins
-Undisclosed Firm",,,"2,144,813.5",,,,,,,,,,,,,,,,
-56,9/30/13,2/13/14,Inogen Inc,Mnfr respiratory equipment,United States,INGN,70.588,70.6,16,Common Shares,Yes,"Foundation Capital LLC
+Undisclosed Firm",JP Morgan,1,2144813.50,NA,172.018,213.334,51.082,112.92,-49.043,-0.229888344,0,188.08,0.00%,0.035217064,12.82,-0.2696,9.13
+52,9/30/13,2/13/14,Inogen Inc,Mnfr respiratory equipment,United States,INGN,70.59,70.60,16.00,Common Shares,Yes,"Foundation Capital LLC
 Foundation Capital LLC
 Undisclosed Firm
 Undisclosed Firm
@@ -1359,8 +1355,8 @@ Kleiner Perkins
 Kleiner Perkins
 Kleiner Perkins
 Millennium TVP Management Co LLC
-Undisclosed Firm",JP Morgan,0,"238,015.5",NA,30.634,48.58,NA,23.12,0.56,1.15%,6.65,55,10.92%,18.94,19.03,-0.003593418,14.14,-5.31%,15.15
-57,3/31/14,4/3/14,GrubHub Inc,Pvd online food delivery svcs,United States,GRUB,192.546,192.5,26,Common Shares,Yes,"Accuitive Medical Ventures LLC
+Undisclosed Firm",JP Morgan,0,238015.50,NA,30.634,48.58,NA,23.12,0.56,0.011527378,6.65,60.90,10.92%,-0.003593418,14.14,-0.053125,15.15
+53,3/31/14,4/3/14,GrubHub Inc,Pvd online food delivery svcs,United States,GRUB,192.55,192.50,26.00,Common Shares,Yes,"Accuitive Medical Ventures LLC
 Versant Venture Management LLC
 Arboretum Ventures Inc
 Undisclosed Firm
@@ -1396,8 +1392,8 @@ Versant Venture Management LLC
 Novo Holdings A/S
 Versant Venture Management LLC
 Accuitive Medical Ventures LLC
-Arboretum Ventures Inc",Citigroup,1,"80,833.4",NA,82.299,137.1,37.35,122.25,6.75,4.92%,1.35,70,0.17%,34.81,35.05,0.005597628,13.37,30.77%,34
-58,03/31/14,04/03/14,Opower Inc,Software Publishers,United States,OPWR,115.9,115.9,19.0,Common Shares,Yes,"T. Rowe Price Threshold Partnerships
+Arboretum Ventures Inc",Citigroup,1,80833.40,NA,82.299,137.1,37.35,122.25,6.75,0.049234136,1.35,795.70,0.17%,0.005597628,13.37,0.307692308,34
+54,3/31/14,4/3/14,Opower Inc,Software Publishers,United States,OPWR,115.90,115.90,19.00,Common Shares,Yes,"T. Rowe Price Threshold Partnerships
 Greenspring Associates Inc
 Amicus Capital LLC
 Amicus Capital LLC
@@ -1414,13 +1410,13 @@ Leo Capital Holdings LLC
 Benchmark Capital
 Benchmark Capital
 Benchmark Capital
-Amicus Capital LLC",,,"87,377.1",,,,,,,,,,,,,,,,
-59,03/31/14,05/14/14,Zendesk Inc,Software Publishers,United States,ZEN,100.0,100.0,9.0,Common Shares,Yes,"New Enterprise Associates Inc
+Amicus Capital LLC",Morgan Stanley,1,87377.10,NA,51.756,88.703,30.551,71.216,-14.161,-0.159645108,3.673,63.14,5.82%,0.005597628,13.37,0.210526316,23
+55,3/31/14,5/14/14,Zendesk Inc,Software Publishers,United States,ZEN,100.00,100.00,9.00,Common Shares,Yes,"New Enterprise Associates Inc
 MHS Capital Management LLC
 Accel Partners & Co Inc
 Kleiner Perkins
-New Enterprise Associates Inc",,,"65,545.0",,,,,,,,,,,,,,,,
-60,3/31/14,6/25/14,GoPro Inc,Photographic and Photocopying Equipment Manufacturing,United States,GPRO,427.2,427.2,24,Class A Shares,Yes,"Institutional Venture Partners
+New Enterprise Associates Inc",Goldman Sachs,2,65545.00,NA,38.228,72.045,37.622,69.347,-22.571,-0.313290305,23.396,92.74,25.23%,0.033453569,12.17,0.694444444,15.25
+56,3/31/14,6/25/14,GoPro Inc,Photographic and Photocopying Equipment Manufacturing,United States,GPRO,427.20,427.20,24.00,Class A Shares,Yes,"Institutional Venture Partners
 Matrix Partners LP
 Benchmark Capital
 Charles River Ventures LLC
@@ -1435,13 +1431,37 @@ Silicon Valley Bancventures LP
 Charles River Ventures LLC
 GGV Capital
 Index Ventures SA
-Matrix Partners LP",JP Morgan,2,"69,999.9",NA,526.016,985.74,157.77,263.08,60.58,6.15%,53.32,39,15.06%,156.42,61.54,0.02119882,11.59,30.58%,31.34
-61,09/30/14,10/01/14,Wayfair Inc,Electronic Shopping,United States,W,319.0,319.0,29.0,Class A Shares,Yes,"Steamboat Ventures
-Riverwood Capital Group LLC
-Sageview Capital LP
-Walden International
-U.S. Venture Partners",,,,,,,,,,,,,,,,,,,
-62,09/30/14,12/11/14,Hortonworks Inc,Develop prepackaged software,United States,HDP,100.0,100.0,16.0,Common Shares,Yes,"HarbourVest Partners LLC
+Matrix Partners LP",JP Morgan,2,69999.90,NA,526.016,985.74,157.77,263.08,60.58,0.061456368,53.32,354.00,15.06%,0.02119882,11.59,0.305833333,31.34
+57,9/30/14,10/9/14,HubSpot Inc,Software Reproducing,United States,HUBS,125.00,125.00,25.00,Common Shares,Yes,"General Catalyst Partners LLC
+Matrix Partners LP
+Scale Venture Partners
+Charles River Ventures LLC
+Cross Creek Capital LP
+Undisclosed Firm
+Sequoia Capital Operations LLC
+GV Management Co LLC
+Undisclosed Firm
+GV Management Co LLC
+Undisclosed Firm
+General Catalyst Partners LLC
+General Catalyst Partners LLC
+Scale Venture Partners
+Scale Venture Partners
+Matrix Partners LP
+Matrix Partners LP
+General Catalyst Partners LLC
+Scale Venture Partners
+General Catalyst Partners LLC
+GV Management Co LLC
+Sequoia Capital Operations LLC
+Undisclosed Firm
+Matrix Partners LP
+Undisclosed Firm
+General Catalyst Partners LLC
+Sequoia Capital Operations LLC
+GV Management Co LLC
+Undisclosed Firm",Morgan Stanley,2,101830.90,NA,51.604,77.634,53.158,82.845,-34.274,-0.441481825,0,50.56,0.00%,-0.03301225,18.76,0.16199996,29.049999
+58,9/30/14,12/11/14,Hortonworks Inc,Develop prepackaged software,United States,HDP,100.00,100.00,16.00,Common Shares,Yes,"HarbourVest Partners LLC
 HarbourVest Partners LLC
 Battery Ventures LP
 Battery Ventures LP
@@ -1453,8 +1473,8 @@ Undisclosed Firm
 Great Hill Equity Partners LLC
 Great Hill Equity Partners LLC
 HarbourVest Partners LLC
-Great Hill Equity Partners LLC",,,"277,485.9",,,,,,,,,,,,,,,,
-63,,1/22/15,Box Inc,Software Publishers,United States,BOX,175,175,14,Class A Shares,Yes,"Undisclosed Firm
+Great Hill Equity Partners LLC",Goldman Sachs,2,277485.90,NA,1.646,10.998,17.187,36.855,-19.711,-1.792234952,0,160.36,0.00%,4.90E-05,20.08,0.648749938,26.379999
+59,,1/22/15,Box Inc,Software Publishers,United States,BOX,175.00,175.00,14.00,Class A Shares,Yes,"Undisclosed Firm
 Benchmark Capital
 Undisclosed Firm
 Passport Capital LLC
@@ -1471,8 +1491,8 @@ Undisclosed Firm
 Index Ventures SA
 Benchmark Capital
 Undisclosed Firm
-Index Ventures SA",Morgan Stanley,2,"231,088.0",NA,58.797,124.19,171.19,257,-168.56,-135.73%,34,27,14.44%,18.79,16.63,-0.007942209,16.4,65.93%,23.23
-64,12/31/14,3/5/15,MaxPoint Interactive Inc,Custom Computer Programming Services,United States,MXPT,74.75,74.8,11.5,Common Shares,Yes,"U.S. Venture Partners
+Index Ventures SA",Morgan Stanley,2,231088.00,NA,58.797,124.19,171.19,257,-168.56,-1.357275143,34,235.49,14.44%,-0.007942209,16.4,0.659285714,23.23
+60,12/31/14,3/5/15,MaxPoint Interactive Inc,Custom Computer Programming Services,United States,MXPT,74.75,74.80,11.50,Common Shares,Yes,"U.S. Venture Partners
 Draper Fisher Jurvetson International Inc
 Bessemer Venture Partners
 Draper Fisher Jurvetson International Inc
@@ -1530,12 +1550,12 @@ Draper Fisher Jurvetson International Inc
 U.S. Venture Partners
 Tarrant Capital IP LLC
 Undisclosed Firm
-Draper Fisher Jurvetson International Inc",Goldman Sachs,2,"564,032.4",NA,35.057,66.07,20.48,34.36,-0.19,-0.29%,17.76,67,24.10%,-56.52,5,0.027436102,14.04,-14.87%,9.79
-65,12/31/14,3/25/15,Solaredge Tech Inc,Pvd photovoltaic solutions svc,United States,SEDG,126,126,18,Common Shares,Yes,"Trinity Ventures LLP
+Draper Fisher Jurvetson International Inc",Goldman Sachs,2,564032.40,NA,35.057,66.07,20.48,34.36,-0.19,-0.002875738,17.76,73.70,24.10%,0.027436102,14.04,-0.148695652,9.79
+61,12/31/14,3/25/15,Solaredge Tech Inc,Pvd photovoltaic solutions svc,United States,SEDG,126.00,126.00,18.00,Common Shares,Yes,"Trinity Ventures LLP
 Madrona Venture Group
 Trinity Ventures LLP
-Trinity Ventures LLP",Goldman Sachs,1,"14,750.0",NA,79.035,133.22,17.79,40.34,-21.38,-16.05%,4.68,16,3.51%,39.94,25.19,-0.025803758,15.44,15.00%,20.700001
-66,3/31/15,6/17/15,Fitbit Inc,Electronic Computer Manufacturing,United States,FIT,731.5,731.5,20,Class A Shares,Yes,"Opus Capital
+Trinity Ventures LLP",Goldman Sachs,1,14750.00,NA,79.035,133.22,17.79,40.34,-21.38,-0.160486413,4.68,133.30,3.51%,-0.025803758,15.44,0.150000056,20.700001
+62,3/31/15,6/17/15,Fitbit Inc,Electronic Computer Manufacturing,United States,FIT,731.50,731.50,20.00,Class A Shares,Yes,"Opus Capital
 Undisclosed Firm
 Genesis Partners Ltd
 Walden International
@@ -1564,8 +1584,8 @@ Undisclosed Firm
 Opus Capital
 Genesis Partners Ltd
 Vertex Venture Holdings Ltd.
-GE Energy Financial Services Inc",Morgan Stanley,2,"119,075.3",NA,271.087,745.43,112.01,199.73,131.77,20.52%,159.61,63,23.85%,49.2,29.84,-0.011778554,14.5,48.40%,29.68
-67,3/31/15,6/25/15,AppFolio Inc,Software Publishers,United States,APPF,74.4,74.4,12,Class A Shares,Yes,"Softbank Capital Partners L P
+GE Energy Financial Services Inc",Morgan Stanley,2,119075.30,NA,271.087,745.43,112.01,199.73,131.77,0.176770455,159.61,669.30,23.85%,-0.011778554,14.5,0.484,29.68
+63,3/31/15,6/25/15,AppFolio Inc,Software Publishers,United States,APPF,74.40,74.40,12.00,Class A Shares,Yes,"Softbank Capital Partners L P
 Softbank Capital Partners L P
 Softbank Capital Partners L P
 Foundry Group LLC
@@ -1588,16 +1608,51 @@ True Ventures LLC
 True Ventures LLC
 True Ventures LLC
 Felicis Ventures
-Felicis Ventures",Morgan Stanley,1,"73,050.4",NA,26.542,47.6,16.88,56.23,-8.62,-18.11%,0.13,41,0.36%,36.92,16.43,-0.003986692,14.01,17.33%,14.08
-68,7/31/15,10/6/15,Pure Storage Inc,Mnfr data storage equip,United States,PSTG,425,425,17,Class A Shares,Yes,"e.ventures
+Felicis Ventures",Morgan Stanley,1,73050.40,NA,26.542,47.6,16.88,56.23,-8.62,-0.181092437,0.13,36.00,0.36%,-0.003986692,14.01,0.173333333,14.08
+64,6/30/15,8/4/15,Sunrun Inc,Electric utility company,United States,RUN,250.60,250.60,14.00,Common Shares,Yes,"Accel Partners & Co Inc
+Madrone Capital Partners
+Accel Partners & Co Inc
+Accel Partners & Co Inc
+Foundation Capital LLC
+Undisclosed Firm
+Undisclosed Firm
+Undisclosed Firm
+Undisclosed Firm
+Madrone Capital Partners
+Undisclosed Firm
+Accel Partners & Co Inc
+Accel Partners & Co Inc
+Foundation Capital LLC
+Undisclosed Firm
+Accel Partners & Co Inc
+Accel Partners & Co Inc
+Madrone Capital Partners
+Sequoia Capital Operations LLC
+Undisclosed Firm
+Foundation Capital LLC
+Undisclosed Firm
+Accel Partners & Co Inc
+Foundation Capital LLC
+Accel Partners & Co Inc
+Foundation Capital LLC
+Accel Partners & Co Inc
+Sequoia Capital Operations LLC
+Sequoia Capital Operations LLC
+Foundation Capital LLC
+Undisclosed Firm
+Foundation Capital LLC
+Accel Partners & Co Inc
+Madrone Capital Partners
+Foundation Capital LLC",Credit Suisse,2,317820.00,NA,54.74,198.557,78.723,331.176,-162.553,-0.818671716,188.604,2016.56,9.35%,0.012867666,13,-0.201428571,11.18
+65,7/31/15,10/6/15,Pure Storage Inc,Mnfr data storage equip,United States,PSTG,425.00,425.00,17.00,Class A Shares,Yes,"e.ventures
 Investment Group of Santa Barbara LLC
 Undisclosed Firm
 Undisclosed Firm
 Investment Group of Santa Barbara LLC
 Investment Group of Santa Barbara LLC
 Investment Group of Santa Barbara LLC
-e.ventures",Morgan Stanley,4,"52,000.0",NA,42.733,174.45,152.32,277.38,-182.23,-104.46%,0,35,0.00%,-15.35,14.39,0.001823431,19.4,-5.82%,16.01
-69,09/30/15,11/18/15,Square Inc,"Data Processing, Hosting, and Related Services",United States,SQ,243.000,243.0,9.000,Class A Shares,Yes,"Index Ventures SA
+e.ventures",Morgan Stanley,4,52000.00,NA,42.733,174.45,152.32,277.38,-182.23,-1.044597306,0,332.40,0.00%,0.001823431,19.4,-0.058235294,16.01
+66,9/30/15,11/18/15,Square Inc,"Data Processing, Hosting, and Related Services",United States,SQ,243.00,243.00,9.00,Class A Shares,Yes,"Index Ventures SA
 Undisclosed Firm
 Redpoint Ventures
 Greylock Partners LLC
@@ -1629,8 +1684,8 @@ Redpoint Ventures
 Redpoint Ventures
 Tiger Global Management LLC
 Index Ventures SA
-Greylock Partners LLC",,,"523,571.6",,,,,,,,,,,,,,,,
-70,9/30/15,12/9/15,Atlassian Corp Plc,Software Publishers,United States,TEAM,462,462,21,Class A Shares,Yes,"Sequoia Capital Operations LLC
+Greylock Partners LLC",Goldman Sachs,2,523571.60,NA,552.433,850.192,112.577,376.665,-154.093,-0.181244942,30,541.89,5.54%,0.026355909,16.85,0.452222222,13.07
+67,9/30/15,12/9/15,Atlassian Corp Plc,Software Publishers,United States,TEAM,462.00,462.00,21.00,Class A Shares,Yes,"Sequoia Capital Operations LLC
 Khosla Ventures LLC
 Kleiner Perkins
 Undisclosed Firm
@@ -1661,26 +1716,26 @@ Kleiner Perkins
 Kleiner Perkins
 Undisclosed Firm
 Khosla Ventures LLC
-Undisclosed Firm",Goldman Sachs,1,"494,750.0",NA,215.109,319.52,67.99,266.17,6.78,2.12%,0,34,0.00%,11.714,23.46,-0.013168041,19.610001,32.29%,27.780001
-71,3/31/16,5/12/16,Acacia Communications Inc,Semiconductor and Related Device Manufacturing,United States,ACIA,103.5,103.5,23,Common Shares,Yes,"Accel Partners & Co Inc
+Undisclosed Firm",Goldman Sachs,1,494750.00,NA,215.109,319.52,67.99,266.17,6.78,0.021219329,0,325.00,0.00%,-0.013168041,19.610001,0.32285719,27.780001
+68,3/31/16,5/12/16,Acacia Communications Inc,Semiconductor and Related Device Manufacturing,United States,ACIA,103.50,103.50,23.00,Common Shares,Yes,"Accel Partners & Co Inc
 T. Rowe Price Threshold Partnerships
 Undisclosed Firm
 Accel Partners & Co Inc
-Accel Partners & Co Inc",Goldman Sachs,2,"210,000.0",NA,105.22,170.51,NA,34.39,17.88,10.49%,0,19,0.00%,217.48,73.02,0.003108003,14.41,34.57%,30.950001
-72,3/31/16,6/1/16,NantHealth Inc,Computer Facilities Management Services,United States,NH,91,91,14,Common Shares,Yes,"Commonwealth Capital Ventures
+Accel Partners & Co Inc",Goldman Sachs,2,210000.00,NA,105.22,170.51,NA,34.39,17.88,0.104861885,0,149.30,0.00%,0.003108003,14.41,0.345652217,30.950001
+69,3/31/16,6/1/16,NantHealth Inc,Computer Facilities Management Services,United States,NH,91.00,91.00,14.00,Common Shares,Yes,"Commonwealth Capital Ventures
 Commonwealth Capital Ventures
 Egan Managed Capital LP
 Summit Partners LP
 Matrix Partners LP
-Matrix Partners LP",Jefferies,1,"20,000.0",NA,33.921,58.3,NA,94.5,-72.01,-123.52%,0,56,0.00%,-14.714,11.94,0.011059302,14.2,32.79%,18.59
-73,03/31/16,06/22/16,Twilio Inc,Software Publishers,United States,TWLO,150.0,150.0,15.0,Class A Shares,Yes,"Verizon Communications Inc
+Matrix Partners LP",Jefferies,1,20000.00,NA,33.921,58.3,NA,94.5,-72.01,-1.23516295,0,601.90,0.00%,0.011059302,14.2,0.327857143,18.59
+70,3/31/16,6/22/16,Twilio Inc,Software Publishers,United States,TWLO,150.00,150.00,15.00,Class A Shares,Yes,"Verizon Communications Inc
 Undisclosed Firm
 Celgene Corp
 Undisclosed Firm
 Undisclosed Firm
 Undisclosed Firm
-Undisclosed Firm",,,"507,500.0",,,,,,,,,,,,,,,,
-74,6/30/16,7/22/16,TPI Composites Inc,Turbine and Turbine Generator Set Units Manufacturing,United States,TPIC,68.75,68.8,11,Common Shares,Yes,"Undisclosed Firm
+Undisclosed Firm",Goldman Sachs,1,507500.00,NA,88.846,166.919,49.308,127.858,-35.504,-0.212701969,0,167.25,0.00%,0.014083129,21.17,0.919333333,28.79
+71,6/30/16,7/22/16,TPI Composites Inc,Turbine and Turbine Generator Set Units Manufacturing,United States,TPIC,68.75,68.80,11.00,Common Shares,Yes,"Undisclosed Firm
 Undisclosed Firm
 Draper Fisher Jurvetson International Inc
 Bessemer Venture Partners
@@ -1706,8 +1761,8 @@ Undisclosed Firm
 Bessemer Venture Partners
 Altimeter Capital Management LP
 Undisclosed Firm
-Undisclosed Firm",JP Morgan,4,"339,014.1",NA,320.747,585.85,NA,41.75,-5.74,-0.98%,84.5,38,23.96%,62.27,17.85,0.043921186,12.02,23.27%,13.56
-75,3/31/16,8/11/16,Airgain Inc,Wireless Telecommunications Carriers (Except Satellite),United States,AIRG,12,12,8,Common Shares,Yes,"Angeleno Group Investors LLC
+Undisclosed Firm",JP Morgan,4,339014.10,NA,320.747,585.85,NA,41.75,-5.74,-0.00979773,84.5,352.60,23.96%,0.043921186,12.02,0.232727273,13.56
+72,3/31/16,8/11/16,Airgain Inc,Wireless Telecommunications Carriers (Except Satellite),United States,AIRG,12.00,12.00,8.00,Common Shares,Yes,"Angeleno Group Investors LLC
 Angeleno Group Investors LLC
 Angeleno Group Investors LLC
 Angeleno Group Investors LLC
@@ -1748,8 +1803,8 @@ Undisclosed Firm
 Angeleno Group Investors LLC
 Element Management LP
 Landmark Partners Inc
-Undisclosed Firm",Northland Capital Markets,0,"109,348.8",NA,25.509,27.793,4.035,11.975,-0.27,-0.97%,0.3469,14,2.55%,104.13,16.33,0.017213292,11.68,0.00%,8
-76,6/30/16,9/15/16,Everbridge Inc,Computer Systems Design Services,United States,EVBG,90,90,12,Common Shares,Yes,"First Stage Capital Equity Funds
+Undisclosed Firm",Northland Capital Markets,0,109348.80,NA,25.509,27.793,4.035,11.975,-0.27,-0.009714676,0.3469,13.60,2.55%,0.017213292,11.68,0,8
+73,6/30/16,9/15/16,Everbridge Inc,Computer Systems Design Services,United States,EVBG,90.00,90.00,12.00,Common Shares,Yes,"First Stage Capital Equity Funds
 First Stage Capital Equity Funds
 First Stage Capital Equity Funds
 Northwater Capital Management Inc
@@ -1769,14 +1824,47 @@ Undisclosed Firm
 Undisclosed Firm
 Gen3 Partners Inc
 Gen3 Partners Inc
-Gen3 Partners Inc",Credit Suisse,1,"16,016.7",NA,42.421,58.72,25.925,49.718,-10.824,-27.80%,1.255,47,2.57%,49.58,17.95,-0.01229587,16.299999,27.08%,15.25
-77,7/31/14,9/29/16,Nutanix Inc,Software Publishers,United States,NTNX,237.92,237.9,16,Class A Shares,Yes,"ABS Ventures
+Gen3 Partners Inc",Credit Suisse,1,16016.70,NA,42.421,58.72,25.925,49.718,-10.824,-0.184332425,1.255,48.90,2.57%,-0.01229587,16.299999,0.270833333,15.25
+74,6/30/16,9/22/16,Apptio Inc,Software Publishers,United States,APTI,96.00,96.00,16.00,Common Shares,Yes,"Greylock Partners LLC
+Madrona Venture Group
+Shasta Ventures LP
+Andreessen Horowitz LLC
+Undisclosed Firm
+Undisclosed Firm
+Madrona Venture Group
+Greylock Partners LLC
+Undisclosed Firm
+Hillman Co
+Undisclosed Firm
+Greylock Partners LLC
+T. Rowe Price Threshold Partnerships
+Shasta Ventures LP
+Madrona Venture Group
+Madrona Venture Group
+Greylock Partners LLC
+Andreessen Horowitz LLC
+Andreessen Horowitz LLC
+Shasta Ventures LP
+Shasta Ventures LP
+Undisclosed Firm
+Andreessen Horowitz LLC
+Andreessen Horowitz LLC
+Greylock Partners LLC
+Madrona Venture Group
+Shasta Ventures LP
+Ignition Ventures Management LLC
+Shasta Ventures LP
+Madrona Venture Group
+Greylock Partners LLC
+Vista Equity Partners LLC
+Vista Equity Partners LLC",Goldman Sachs,2,135999.90,NA,106.615,129.251,71.337,119.653,-41.007,-0.317266404,0,107.49,0.00%,-0.008174672,12.02,0.409374938,22.549999
+75,7/31/14,9/29/16,Nutanix Inc,Software Publishers,United States,NTNX,237.92,237.90,16.00,Class A Shares,Yes,"ABS Ventures
 Undisclosed Firm
 ABS Ventures
 ABS Ventures
 ABS Ventures
-ABS Ventures",Goldman Sachs,3,"11,280.0",NA,127.127,241.432,73.51,259.328,-126.127,-52.24%,0,10,0.00%,17.31,18.77,-0.01522939,14.02,131.25%,37
-78,6/30/16,10/7/16,EverSpin Technologies,"Mnfr memory,sensors",United States,MRAM,40,40,8,Common Shares,Yes,"Beijing Capital Investment Co Ltd
+ABS Ventures",Goldman Sachs,3,11280.00,NA,127.127,241.432,73.51,259.328,-126.127,-0.522412108,0,119.00,0.00%,-0.01522939,14.02,1.3125,37
+76,6/30/16,10/7/16,EverSpin Technologies,"Mnfr memory,sensors",United States,MRAM,40.00,40.00,8.00,Common Shares,Yes,"Beijing Capital Investment Co Ltd
 Khosla Ventures LLC
 Morgan Stanley Expansion Capital
 Battery Ventures LP
@@ -1797,8 +1885,8 @@ Khosla Ventures LLC
 Khosla Ventures LLC
 Khosla Ventures LLC
 Goldman Sachs & Co LLC
-Lightspeed Management Company LLC",Stifel,1,"320,197.0",NA,24.896,26.546,3.823,31.514,-17.536,-66.06%,9.046,15,66.03%,6.25,8.5,-0.018127036,13.48,0.25%,8.02
-79,9/25/16,10/27/16,Quantenna Communications Inc,Internet Service Providers,United States,QTNA,107.2,107.2,16,Common Shares,Yes,"New Venture Partners LLC
+Lightspeed Management Company LLC",Stifel,1,320197.00,NA,24.896,26.546,3.823,31.514,-17.536,-0.660589166,9.046,13.70,66.03%,-0.018127036,13.48,0.0025,8.02
+77,9/25/16,10/27/16,Quantenna Communications Inc,Internet Service Providers,United States,QTNA,107.20,107.20,16.00,Common Shares,Yes,"New Venture Partners LLC
 Draper Fisher Jurvetson International Inc
 NXP USA Inc
 Epic Ventures Inc
@@ -1830,8 +1918,8 @@ Epic Ventures Inc
 Undisclosed Firm
 Sigma Partners
 Epic Ventures Inc
-New Venture Partners LLC",Morgan Stanley,2,"136,824.1",NA,66.86,83.733,6.644,47.431,-70.45,-84.14%,10.069,51,18.27%,9.624,17.54,-0.011133316,15.36,-12.06%,14.07
-80,12/31/16,03/01/17,Snap Inc,Software Reproducing,United States,SNAP,3400.0,3400.0,17.0,Class A Shares,Yes,"Sigma Partners
+New Venture Partners LLC",Morgan Stanley,2,136824.10,NA,66.86,83.733,6.644,47.431,-70.45,-0.841364814,10.069,55.10,18.27%,-0.011133316,15.36,-0.120625,14.07
+78,12/31/16,3/1/17,Snap Inc,Software Reproducing,United States,SNAP,3400.00,3400.00,17.00,Class A Shares,Yes,"Sigma Partners
 Sigma Partners
 Sigma Partners
 Sigma Partners
@@ -1919,8 +2007,8 @@ Sequoia Capital Operations LLC
 Sequoia Capital Operations LLC
 Duff Ackerman & Goodrich LLC
 TPG Capital Management LP
-TPG Capital Management LP",,,"168,142.7",,,,,,,,,,,,,,,,
-81,12/31/16,03/16/17,MuleSoft Inc,Software Publishers,United States,MULE,221.0,221.0,17.0,Class A Shares,Yes,"CapitalG Management Company LLC
+TPG Capital Management LP",Morgan Stanley,6,168142.70,NA,58.663,404.482,125.371,924.867,-514.463,-1.271905796,0,1723.00,0.00%,0.053746411,12.54,0.44,24.48
+79,12/31/16,3/16/17,MuleSoft Inc,Software Publishers,United States,MULE,221.00,221.00,17.00,Class A Shares,Yes,"CapitalG Management Company LLC
 SV Angel
 Benchmark Capital
 Institutional Venture Partners
@@ -1945,8 +2033,8 @@ Undisclosed Firm
 CapitalG Management Company LLC
 Meritech Capital Partners
 Undisclosed Firm
-Undisclosed Firm",,,"2,423,771.6",,,,,,,,,,,,,,,,
-82,9/30/15,4/5/17,Elevate Credit Inc,Miscellaneous Financial Investment Activities,United States,ELVT,80.6,80.6,6.5,Common Shares,Yes,"Morgenthaler Ventures
+Undisclosed Firm",Goldman Sachs,2,2423771.60,NA,110.252,187.747,122.63,187.069,-49.599,-0.264179987,0,202.94,0.00%,0.020453569,11.21,0.455882353,24.75
+80,9/30/15,4/5/17,Elevate Credit Inc,Miscellaneous Financial Investment Activities,United States,ELVT,80.60,80.60,6.50,Common Shares,Yes,"Morgenthaler Ventures
 Bay Partners
 Bay Partners
 Morgenthaler Ventures
@@ -2000,9 +2088,8 @@ Undisclosed Firm
 Sapphire Ventures LLC
 Hummer Winblad Venture Partner
 Hummer Winblad Venture Partner
-Hummer Winblad Venture Partner",UBS,3,"261,877.2",NA,179.694,300.306,5.878,84.612,-20.155,-6.71%,174.8,36,51.75%,-6.77,6.06,-0.012325977,12.89,19.38%,7.76
-83,03/31/17,04/05/17,Elevate Credit Inc,Miscellaneous Financial Investment Activities,United States,ELVT,80.6,80.6,6.5,Common Shares,Yes,,,,,,,,,,,,,,,,,,,,
-84,01/31/17,04/06/17,Okta Inc,Software Publishers,United States,OKTA,187.0,187.0,17.0,Class A Shares,Yes,"Greylock Partners LLC
+Hummer Winblad Venture Partner",UBS,3,261877.20,NA,179.694,300.306,5.878,84.612,-20.155,-0.067114876,174.8,362.04,48.28%,-0.012325977,12.89,0.193846154,7.76
+81,1/31/17,4/6/17,Okta Inc,Software Publishers,United States,OKTA,187.00,187.00,17.00,Class A Shares,Yes,"Greylock Partners LLC
 Greylock Partners LLC
 Greylock Partners LLC
 Floodgate Fund LP
@@ -2029,8 +2116,8 @@ Greylock Partners LLC
 Andreessen Horowitz LLC
 Khosla Ventures LLC
 Undisclosed Firm
-Undisclosed Firm",,,"232,169.9",,,,,,,,,,,,,,,,
-85,01/31/17,04/12/17,Yext Inc,Dvlp local search solutions,United States,YEXT,115.5,115.5,11.0,Common Shares,Yes,"Sutter Hill Ventures
+Undisclosed Firm",Goldman Sachs,2,232169.90,NA,41.01,85.907,77.915,125.871,-76.302,-0.888193046,0,120.78,0.00%,-0.00658227,12.39,0.382941176,23.51
+82,1/31/17,4/12/17,Yext Inc,Dvlp local search solutions,United States,YEXT,115.50,115.50,11.00,Common Shares,Yes,"Sutter Hill Ventures
 Sutter Hill Ventures
 Sutter Hill Ventures
 WGI Group
@@ -2048,8 +2135,8 @@ Insight Venture Management LLC
 Institutional Venture Partners
 Institutional Venture Partners
 Innovation Endeavors
-Undisclosed Firm",,,"116,472.9",,,,,,,,,,,,,,,,
-86,01/31/17,04/27/17,Cloudera Inc,Provides data management software and services,United States,CLDR,225.0,225.0,15.0,Common Shares,Yes,"Accel Partners & Co Inc
+Undisclosed Firm",Morgan Stanley,2,116472.90,NA,60.002,89.724,49.822,84.829,-26.495,-0.295294459,0,66.90,0.00%,-0.015895038,15.77,0.219090909,13.41
+83,1/31/17,4/27/17,Cloudera Inc,Provides data management software and services,United States,CLDR,225.00,225.00,15.00,Common Shares,Yes,"Accel Partners & Co Inc
 Accel Partners & Co Inc
 Accel Partners & Co Inc
 Ignition Ventures Management LLC
@@ -2092,15 +2179,12 @@ Accel Partners & Co Inc
 Accel Partners & Co Inc
 Accel Partners & Co Inc
 Accel Partners & Co Inc
-Intel Capital Corp",,,"1,040,677.3",,,,,,,,,,,,,,,,
-87,03/31/17,05/11/17,Veritone Inc,Custom Computer Programming Services,United States,VERI,37.5,37.5,15.0,Common Shares,Yes,"Miramar Venture Partners LP
-Undisclosed Firm
-Miramar Venture Partners LP",,,"49,000.0",,,,,,,,,,,,,,,,
-88,03/31/17,05/24/17,Appian Corp,Dvlp bus process mgmt software,United States,APPN,75.0,75.0,12.0,Class A Shares,Yes,"New Enterprise Associates Inc
+Intel Capital Corp",Morgan Stanley,2,1040677.30,NA,166.048,261.026,203.161,361.377,-187.317,-0.717618168,0,442.54,0.00%,0.013938462,10.36,0.206666667,18.1
+84,3/31/17,5/24/17,Appian Corp,Dvlp bus process mgmt software,United States,APPN,75.00,75.00,12.00,Class A Shares,Yes,"New Enterprise Associates Inc
 Novak Biddle Venture Partners LP
 Novak Biddle Venture Partners LP
-Undisclosed Firm",,,"47,500.0",,,,,,,,,,,,,,,,
-89,03/31/17,06/28/17,Blue Apron Holdings Inc,Mail-Order Houses,United States,APRN,300.0,300.0,10.0,Class A Shares,Yes,"First Round Capital
+Undisclosed Firm",Morgan Stanley,2,47500.00,NA,112.204,132.923,54.137,94.17,-12.461,-0.093746003,20,96.52,20.72%,0.014504377,10.02,0.25,15
+85,3/31/17,6/28/17,Blue Apron Holdings Inc,Mail-Order Houses,United States,APRN,300.00,300.00,10.00,Class A Shares,Yes,"First Round Capital
 Bessemer Venture Partners
 Undisclosed Firm
 Bessemer Venture Partners
@@ -2115,8 +2199,8 @@ Undisclosed Firm
 Bessemer Venture Partners
 First Round Capital
 Undisclosed Firm
-Undisclosed Firm",,,"195,300.1",,,,,,,,,,,,,,,,
-90,,7/27/17,Redfin Corp,Other Real Estate Services,United States,RDFN,138.465,138.5,15,Common Shares,Yes,"Vulcan Capital
+Undisclosed Firm",Goldman Sachs,3,195300.10,NA,340.803,795.416,144.141,850.219,-54.886,-0.069002887,44.533,322.47,13.81%,0.008240186,10.03,-0.005,9.95
+86,,7/27/17,Redfin Corp,Other Real Estate Services,United States,RDFN,138.47,138.50,15.00,Common Shares,Yes,"Vulcan Capital
 Undisclosed Firm
 Annox Capital
 Globespan Capital Partners
@@ -2157,8 +2241,8 @@ Hillman Co
 Draper Fisher Jurvetson International Inc
 Hillman Co
 Glynn Capital Management LLC
-Tiger Global Management LLC",Goldman Sachs,1,"168,513.3",NA,187.338,267.196,28.571,105.528,-22.526,-8.43%,0,9,0.00%,47.47,22.12,0.024323519,10.11,44.67%,21.700001
-91,06/30/17,09/27/17,Roku Inc,Cable and Other Subscription Programming,United States,ROKU,219.4,219.4,14.0,Class A Shares,Yes,"Undisclosed Firm
+Tiger Global Management LLC",Goldman Sachs,1,168513.30,NA,187.338,267.196,28.571,105.528,-22.526,-0.084305154,0,116.91,0.00%,0.024323519,10.11,0.446666733,21.700001
+87,6/30/17,9/27/17,Roku Inc,Cable and Other Subscription Programming,United States,ROKU,219.40,219.40,14.00,Class A Shares,Yes,"Undisclosed Firm
 Undisclosed Firm
 Undisclosed Firm
 Fidelity Investment Funds II
@@ -2178,12 +2262,12 @@ Undisclosed Firm
 Menlo Ventures
 Menlo Ventures
 Menlo Ventures
-Globespan Capital Partners",,,"196,858.9",,,,,,,,,,,,,,,,
-92,9/30/17,10/11/17,Cargurus Inc,"Data Processing, Hosting, and Related Services",United States,CARG,150.4,150.4,16,Class A Shares,Yes,"T. Rowe Price Threshold Partnerships
+Globespan Capital Partners",Morgan Stanley,1,196858.90,NA,319.857,398.649,52.888,164.406,-42.758,-0.107257261,22.811,190.08,12.00%,0.022406656,9.87,0.678571429,23.5
+88,9/30/17,10/11/17,Cargurus Inc,"Data Processing, Hosting, and Related Services",United States,CARG,150.40,150.40,16.00,Class A Shares,Yes,"T. Rowe Price Threshold Partnerships
 Foxhaven Asset Management LP
 Undisclosed Firm
-Undisclosed Firm",Goldman Sachs,2,"60,000.0",NA,75.142,171.302,154.125,179.997,6.497,3.79%,0,11,0.00%,137.88,38.06,0.023313659,9.85,72.38%,27.58
-93,7/31/17,10/18/17,MongoDB,Software Reproducing,United States,MDB,192,192,24,Class A Shares,Yes,"T. Rowe Price Threshold Partnerships
+Undisclosed Firm",Goldman Sachs,2,60000.00,NA,75.142,171.302,154.125,179.997,6.497,0.03792717,0,121.30,0.00%,0.023313659,9.85,0.72375,27.58
+89,7/31/17,10/18/17,MongoDB,Software Reproducing,United States,MDB,192.00,192.00,24.00,Class A Shares,Yes,"T. Rowe Price Threshold Partnerships
 In Q Tel Inc
 Goldman Sachs & Co LLC
 Altimeter Capital Management LP
@@ -2211,9 +2295,9 @@ Union Square Ventures LLC
 Sequoia Capital Operations LLC
 Exeter Venture Management Company LLC
 New Enterprise Associates Inc
-Union Square Ventures LLC",Morgan Stanley,3,"311,000.0",NA,65.271,101.358,78.584,157.438,-86.681,-85.52%,0,20,0.00%,59.791,38.35,0.02402691,10.07,33.63%,32.07
-94,9/30/17,11/9/17,Bandwidth Inc,Internet Service Providers,United States,BAND,80,80,20,Class A Shares,Yes,Carmichael Partners LLC,Morgan Stanley,2,"22,000.0",NA,137.801,152.125,9.294,51.673,25.358,16.67%,37.674,60,59.52%,71.05,34.21,0.013942416,10.5,5.95%,21.190001
-95,6/30/17,11/14/17,SendGrid Inc,Software Publishers,United States,SEND,131.2,131.2,16,Common Shares,Yes,"Techstar
+Union Square Ventures LLC",Morgan Stanley,3,311000.00,NA,65.271,101.358,78.584,157.438,-86.681,-0.855196432,0,157.80,0.00%,0.02402691,10.07,0.33625,32.07
+90,9/30/17,11/9/17,Bandwidth Inc,Internet Service Providers,United States,BAND,80.00,80.00,20.00,Class A Shares,Yes,Carmichael Partners LLC,Morgan Stanley,2,22000.00,NA,137.801,152.125,9.294,51.673,25.358,0.166691865,37.674,63.30,59.52%,0.013942416,10.5,0.05950005,21.190001
+91,6/30/17,11/14/17,SendGrid Inc,Software Publishers,United States,SEND,131.20,131.20,16.00,Common Shares,Yes,"Techstar
 Bain Capital Venture Partners LLC
 Uncork Capital
 Bain Capital Venture Partners LLC
@@ -2240,14 +2324,14 @@ Foundry Group LLC
 Bessemer Venture Partners
 Undisclosed Firm
 Bain Capital Venture Partners LLC
-Highway 12 Ventures",Morgan Stanley,1,"81,896.1",NA,58.476,79.929,21.8,61.925,-3.908,-4.89%,0,66,0.00%,63.75,26.2,0.009557829,11.59,12.50%,18
-96,7/29/17,11/16/17,Stitch Fix Inc,Mail-Order Houses,United States,SFIX,120,120,15,Class A Shares,Yes,"Benchmark Capital
+Highway 12 Ventures",Morgan Stanley,1,81896.10,NA,58.476,79.929,21.8,61.925,-3.908,-0.048893393,0,73.40,0.00%,0.009557829,11.59,0.125,18
+92,7/29/17,11/16/17,Stitch Fix Inc,Mail-Order Houses,United States,SFIX,120.00,120.00,15.00,Class A Shares,Yes,"Benchmark Capital
 Baseline Ventures LLC
 Benchmark Capital
 Lightspeed Management Company LLC
-Western Technology Investment",Goldman Sachs,1,"16,749.9",NA,730.313,977.139,NA,402.781,-0.594,-0.06%,0,28,0.00%,39.47,20.92,0.012330191,11.76,1.00%,15.15
-97,9/30/17,12/14/17,Casa Systems Inc,Mnfr cable edge devices,United States,CASA,78,78,13,Common Shares,Yes,Summit Partners LP,Morgan Stanley,1,"96,460.0",NA,272.45,316.128,36.114,103.539,88.668,28.05%,557.529,43,149.71%,41.307,18.37,0.030768605,10.49,10.77%,14.4
-98,9/30/17,2/9/18,Cardlytics Inc,Provide marketing services,United States,CDLX,70.2,70.2,13,Common Shares,Yes,"TTV Capital LLC
+Western Technology Investment",Goldman Sachs,1,16749.90,NA,730.313,977.139,NA,402.781,-0.594,-0.000607897,0,237.20,0.00%,0.012330191,11.76,0.01,15.15
+93,9/30/17,12/14/17,Casa Systems Inc,Mnfr cable edge devices,United States,CASA,78.00,78.00,13.00,Common Shares,Yes,Summit Partners LP,Morgan Stanley,1,96460.00,NA,272.45,316.128,36.114,103.539,88.668,0.280481324,298.147,583.04,51.14%,0.030768605,10.49,0.107692308,14.4
+94,9/30/17,2/9/18,Cardlytics Inc,Provide marketing services,United States,CDLX,70.20,70.20,13.00,Common Shares,Yes,"TTV Capital LLC
 Discovery Capital Corp
 Discovery Capital Corp
 Polaris Growth Management LLC
@@ -2275,14 +2359,14 @@ Polaris Growth Management LLC
 Undisclosed Firm
 Undisclosed Firm
 Polaris Growth Management LLC
-Undisclosed Firm",Bank of America,1,"181,013.4",NA,77.634,112.821,31.261,169.053,-75.696,-67.09%,111.8,78,119.70%,44.769,18.82,-0.046038214,29.059999,2.85%,13.37
-99,01/31/18,03/15/18,Zscaler Inc,Develop prepackaged software,United States,ZS,192.0,192.0,16.0,Common Shares,Yes,"CapitalG Management Company LLC
+Undisclosed Firm",Bank of America,1,181013.40,NA,77.634,112.821,31.261,169.053,-75.696,-0.670938921,55.513,93.40,59.44%,-0.046038214,29.059999,0.028461538,13.37
+95,1/31/18,3/15/18,Zscaler Inc,Develop prepackaged software,United States,ZS,192.00,192.00,16.00,Common Shares,Yes,"CapitalG Management Company LLC
 Tarrant Capital IP LLC
 EMC Ventures
 Lightspeed Management Company LLC
 Lightspeed Management Company LLC
-Undisclosed Firm",,,"148,000.0",,,,,,,,,,,,,,,,
-100,12/31/17,03/22/18,Dropbox Inc,Pvd information retrieval svcs,United States,DBX,756.0,756.0,21.0,Common Shares,Yes,"Sequoia Capital Operations LLC
+Undisclosed Firm",Morgan Stanley,1,148000.00,NA,80.325,125.717,79.236,133.318,-35.46,-0.282062092,0,188.17,0.00%,0.033834586,16.59,1.0625,33
+96,12/31/17,3/22/18,Dropbox Inc,Pvd information retrieval svcs,United States,DBX,756.00,756.00,21.00,Common Shares,Yes,"Sequoia Capital Operations LLC
 RIT Capital Partners PLC
 Greylock Partners LLC
 Benchmark Capital
@@ -2301,8 +2385,8 @@ Accel Partners & Co Inc
 Undisclosed Firm
 Institutional Venture Partners
 Goldman Sachs & Co LLC
-Index Ventures SA",,,"582,250.0",,,,,,,,,,,,,,,,
-101,01/31/18,04/11/18,Zuora Inc,Pvd relationship business mgmt solutions,United States,ZUO,154.0,154.0,14.0,Class A Shares,Yes,"Lehman Brothers Venture Partners LP
+Index Ventures SA",Goldman Sachs,4,582250.00,NA,844.8,1106.8,314,851.6,-111.7,-0.100921576,0,1019.90,0.00%,-0.028481876,23.34,0.356190476,28.48
+97,1/31/18,4/11/18,Zuora Inc,Pvd relationship business mgmt solutions,United States,ZUO,154.00,154.00,14.00,Class A Shares,Yes,"Lehman Brothers Venture Partners LP
 Redpoint Ventures
 Shasta Ventures LP
 Index Ventures SA
@@ -2353,8 +2437,8 @@ Undisclosed Firm
 Undisclosed Firm
 Greylock Partners LLC
 Shasta Ventures LP
-NextWorld Capital LLC",,,"242,525.0",,,,,,,,,,,,,,,,
-102,3/31/18,4/25/18,nLIGHT Inc,Semiconductor and Related Device Manufacturing,United States,LASR,96,96,16,Common Shares,Yes,"Undisclosed Firm
+NextWorld Capital LLC",Goldman Sachs,3,242525.00,NA,113.008,167.926,73.087,134.298,-47.155,-0.280808213,14.969,155.37,9.63%,-0.052994326,20.24,0.428571429,20
+98,3/31/18,4/25/18,nLIGHT Inc,Semiconductor and Related Device Manufacturing,United States,LASR,96.00,96.00,16.00,Common Shares,Yes,"Undisclosed Firm
 Oak Investment Partners
 Oak Investment Partners
 Undisclosed Firm
@@ -2408,8 +2492,8 @@ Adams Capital Management, Inc.
 Mohr Davidow Ventures
 Oak Investment Partners
 Menlo Ventures
-Oak Investment Partners",Stifel,1,"180,205.1",NA,101.325,138.58,NA,34.476,1.837,1.33%,15.108,8,13.00%,12.5,18,-0.005582513,17.84,68.44%,26.950001
-103,1/31/18,4/26/18,DocuSign Inc,Develop Internet software,United States,DOCU,629.3,629.3,29,Common Shares,Yes,"Kleiner Perkins
+Oak Investment Partners",Stifel,1,180205.10,NA,101.325,138.58,NA,34.476,1.837,0.013255881,15.108,116.20,13.00%,-0.005582513,17.84,0.684375063,26.950001
+99,1/31/18,4/26/18,DocuSign Inc,Develop Internet software,United States,DOCU,629.30,629.30,29.00,Common Shares,Yes,"Kleiner Perkins
 Kleiner Perkins
 Sigma Partners
 Sigma Partners
@@ -2494,8 +2578,8 @@ Accel Partners & Co Inc
 Ignition Ventures Management LLC
 Undisclosed Firm
 Kleiner Perkins
-Comcast Ventures",Morgan Stanley,1,"548,817.6",NA,229.127,381.549,240.787,394.799,-115.412,-30.25%,0,59,0.00%,35.07,39.17,0.021910943,16.24,37.00%,39.73
-104,03/31/18,05/03/18,Carbon Black Inc,Software Publishers,United States,CBLK,152.0,152.0,19.0,Common Shares,Yes,"Kleiner Perkins
+Comcast Ventures",Morgan Stanley,1,548817.60,NA,229.127,381.549,240.787,394.799,-115.412,-0.302482774,0,620.00,0.00%,0.021910943,16.24,0.37,39.73
+100,3/31/18,5/3/18,Carbon Black Inc,Software Publishers,United States,CBLK,152.00,152.00,19.00,Common Shares,Yes,"Kleiner Perkins
 Kleiner Perkins
 Kleiner Perkins
 406 Ventures LLC
@@ -2540,8 +2624,8 @@ Atlas Venture Advisors Inc
 Kleiner Perkins
 Atlas Venture Advisors Inc
 Atlas Venture Advisors Inc
-Atlas Venture Advisors Inc",,,"189,716.1",,,,,,,,,,,,,,,,
-105,03/31/18,06/14/18,Avalara Inc,Dvlp sales tax calculation software,United States,AVLR,180.0,180.0,24.0,Common Shares,Yes,"Warburg Pincus LLC
+Atlas Venture Advisors Inc",Morgan Stanley,1,189716.10,NA,116.239,162.014,107.19,181.574,-55.827,-0.344581332,0,260.61,0.00%,0.007094398,15.9,0.26,23.94
+101,3/31/18,6/14/18,Avalara Inc,Dvlp sales tax calculation software,United States,AVLR,180.00,180.00,24.00,Common Shares,Yes,"Warburg Pincus LLC
 Benaroya Co
 Benaroya Co
 Battery Ventures LP
@@ -2591,8 +2675,8 @@ Battery Ventures LP
 Benaroya Co
 BIP Wealth LLC
 Warburg Pincus LLC
-Warburg Pincus LLC",,,"397,805.0",,,,,,,,,,,,,,,,
-106,3/31/18,8/1/18,Sonos Inc,Dvlp digital music software,United States,SONO,208.333,208.3,15,Common Shares,Yes,"e.ventures
+Warburg Pincus LLC",Goldman Sachs,2,397805.00,NA,167.426,213.159,133.794,218.514,-64.216,-0.301258685,38.84,208.87,18.60%,0.028144614,12.12,0.872499958,44.939999
+102,3/31/18,8/1/18,Sonos Inc,Dvlp digital music software,United States,SONO,208.33,208.30,15.00,Common Shares,Yes,"e.ventures
 e.ventures
 Redpoint Ventures
 Undisclosed Firm
@@ -2606,8 +2690,43 @@ Index Ventures SA
 Elevation Partners LP
 Elevation Partners LP
 Index Ventures SA
-IGSB Investment",Morgan Stanley,2,"244,799.9",NA,901.284,992.526,270.162,471.674,-38.214,-3.85%,39.657,37,11.31%,-25.333,11.2,0.033105277,13.15,32.73%,19.91
-107,12/31/18,03/28/19,Lyft Inc,Software Reproducing,United States,LYFT,2340.0,2340.0,72.0,Class A Shares,Yes,"Fontinalis Partners LLC
+IGSB Investment",Morgan Stanley,2,244799.90,NA,901.284,992.526,270.162,471.674,-38.214,-0.038501762,39.657,350.70,11.31%,0.033105277,13.15,0.327333333,19.91
+103,6/30/18,9/19/18,Eventbrite Inc,Develop Internet software,United States,EB,230.00,230.00,23.00,Class A Shares,Yes,"Sequoia Capital Operations LLC
+Sequoia Capital Operations LLC
+Sequoia Capital Operations LLC
+Global Founders Capital Management GmbH
+Tiger Global Management LLC
+Tiger Global Management LLC
+Tiger Global Management LLC
+T. Rowe Price Threshold Partnerships
+T. Rowe Price Threshold Partnerships
+Tiger Global Management LLC
+Tiger Global Management LLC
+Duff Ackerman & Goodrich LLC
+Lehman Brothers Venture Partners LP
+Sequoia Capital Operations LLC
+T. Rowe Price Threshold Partnerships
+Sequoia Capital Operations LLC
+Duff Ackerman & Goodrich LLC
+Lehman Brothers Venture Partners LP
+Sequoia Capital Operations LLC
+Tiger Global Management LLC
+Undisclosed Firm
+T. Rowe Price Threshold Partnerships
+T. Rowe Price Threshold Partnerships
+Undisclosed Firm
+Sequoia Capital Operations LLC
+Tiger Global Management LLC
+Undisclosed Firm",Goldman Sachs,3,356514.10,NA,133.499,201.597,55.17,153.337,-38.547,-0.191208203,66.36,637.65,10.41%,0.019427968,11.75,0.409565217,32.42
+104,9/30/18,10/2/18,Upwork Inc,"Data Processing, Hosting, and Related Services",United States,UPWK,187.50,187.50,15.00,Common Shares,Yes,"Globespan Capital Partners
+Undisclosed Firm
+Benchmark Capital
+FirstMark Capital LLC
+Jackson Square Ventures I LP
+New Enterprise Associates Inc
+Stripes Group LLC
+T. Rowe Price Threshold Partnerships",Citigroup,2,30000.10,NA,164.445,202.522,53.044,140.232,-4.123,-0.020358282,23.491,290.26,8.09%,0.006038439,12.05,0.4,21
+105,12/31/18,3/28/19,Lyft Inc,Software Reproducing,United States,LYFT,2340.00,2340.00,72.00,Class A Shares,Yes,"Fontinalis Partners LLC
 K9 Ventures LLC
 Floodgate Fund LP
 K9 Ventures LLC
@@ -2651,8 +2770,8 @@ Undisclosed Firm
 KKR & Co Inc
 Henderson Global Investors Ltd
 Undisclosed Firm
-Undisclosed Firm",,,"4,812,199.8",,,,,,,,,,,,,,,,
-108,10/31/18,04/10/19,Pagerduty Inc,All Other Telecommunications,United States,PD,217.7,217.7,24.0,Common Shares,Yes,"Bessemer Venture Partners
+Undisclosed Firm",JP Morgan,2,4812199.80,NA,1059.881,2156.616,803.751,3134.327,-911.335,-0.422576388,0,3760.00,0.00%,0.004976314,14.43,0.087361125,78.290001
+106,10/31/18,4/10/19,Pagerduty Inc,All Other Telecommunications,United States,PD,217.70,217.70,24.00,Common Shares,Yes,"Bessemer Venture Partners
 Andreessen Horowitz LLC
 Andreessen Horowitz LLC
 Bessemer Venture Partners
@@ -2675,8 +2794,8 @@ Harrison Metal Capital
 Harrison Metal Capital
 Bessemer Venture Partners
 Baseline Ventures LLC
-Andreessen Horowitz LLC",,,"171,701.9",,,,,,,,,,,,,,,,
-109,1/31/19,4/17/19,Zoom Video Communications Inc,Software Publishers,United States,ZM,751.304,751.3,36,Class A Shares,Yes,"Glencoe Capital LLC
+Andreessen Horowitz LLC",Morgan Stanley,3,171701.90,NA,56.607,83.993,47.351,107.504,-34.534,-0.41115331,0,182.16,0.00%,0.035375689,13.3,0.59375,38.25
+107,1/31/19,4/17/19,Zoom Video Communications Inc,Software Publishers,United States,ZM,751.30,751.30,36.00,Class A Shares,Yes,"Glencoe Capital LLC
 Undisclosed Firm
 Undisclosed Firm
 FirstMark Capital LLC
@@ -2715,8 +2834,8 @@ Undisclosed Firm
 Undisclosed Firm
 Bessemer Venture Partners
 Wellington Management Company LLP
-FirstMark Capital LLC",Morgan Stanley,3,"1,368,100.0",NA,151.478,330.517,185.821,263.349,7.584,2.29%,0,40,0.00%,97.53,71.11,0.025218805,12.6,72.22%,62
-110,03/31/19,04/17/19,Pinterest Inc,Pvd online networking services,United States,PINS,1425.0,1425.0,19.0,Class A Shares,Yes,"Undisclosed Firm
+FirstMark Capital LLC",Morgan Stanley,3,1368100.00,NA,151.478,330.517,185.821,263.349,7.584,0.02294587,0,354.60,0.00%,0.025218805,12.6,0.722222222,62
+108,3/31/19,4/17/19,Pinterest Inc,Pvd online networking services,United States,PINS,1425.00,1425.00,19.00,Class A Shares,Yes,"Undisclosed Firm
 Horizons Ventures Ltd
 Qualcomm Ventures
 Undisclosed Firm
@@ -2728,8 +2847,8 @@ Qualcomm Ventures
 Emergence Capital Partners LLC
 Horizons Ventures Ltd
 Qualcomm Ventures
-Undisclosed Firm",,,"157,465.8",,,,,,,,,,,,,,,,
-111,03/30/19,05/01/19,Beyond Meat Inc,Meat Markets,United States,BYND,240.6,240.6,25.0,Common Shares,Yes,"Obvious Ventures Management LLC
+Undisclosed Firm",Goldman Sachs,2,157465.80,NA,472.852,755.932,259.929,830.653,-62.974,-0.083306435,0,1152.73,0.00%,0.025218805,12.6,0.284210526,24.4
+109,3/30/19,5/1/19,Beyond Meat Inc,Meat Markets,United States,BYND,240.60,240.60,25.00,Common Shares,Yes,"Obvious Ventures Management LLC
 Union Grove Venture Partners 2014 LLC
 Greatpoint Investment Management LLC
 Union Grove Venture Partners 2014 LLC
@@ -2758,8 +2877,56 @@ Tyson New Ventures LLC
 Undisclosed Firm
 Cleveland Avenue LLC
 Undisclosed Firm
-Lauder Partners LLC",,,"162,076.9",,,,,,,,,,,,,,,,
-112,04/30/19,06/11/19,Crowdstrike Holdings Inc,Software Publishers,United States,CRWD,612.0,612.0,34.0,Class A Shares,Yes,"Warburg Pincus LLC
+Lauder Partners LLC",Goldman Sachs,2,162076.90,NA,32.581,87.934,34.461,45.563,-29.886,-0.339868538,30.388,133.75,22.72%,0.020921566,14.8,1.63,65.75
+110,12/31/16,5/9/19,Uber Technologies Inc,Software Publishers,United States,UBER,8100.00,8100.00,45.00,Common Shares,Yes,"Lowercase Capital LLC
+Bezos Expeditions
+Benchmark Capital
+First Round Capital
+Goldman Sachs & Co LLC
+First Round Capital
+Goldman Sachs & Co LLC
+Undisclosed Firm
+Benchmark Capital
+Undisclosed Firm
+Undisclosed Firm
+First Round Capital
+Menlo Ventures
+Bezos Expeditions
+Benchmark Capital
+GV Management Co LLC
+Undisclosed Firm
+Qatar Investment Authority
+New Enterprise Associates Inc
+Lone Pine Capital LLC
+Undisclosed Firm
+Undisclosed Firm
+Tata Capital Ltd
+Undisclosed Firm
+Summit Partners LP
+BlackRock Inc
+Kleiner Perkins
+Fidelity Investment Funds II
+Wellington Management Company LLP
+Sequoia Capital Operations LLC
+Undisclosed Firm
+SoftBank Group Corp
+Newview Capital Management LLC
+Lauder Partners LLC
+Lowercase Capital LLC
+First Round Capital
+Undisclosed Firm
+Foundation Capital LLC
+Public Investment Fund
+Undisclosed Firm
+Founder Collective LP
+GV Management Co LLC
+TPG Capital Management LP
+Menlo Ventures
+Goldman Sachs & Co LLC
+Undisclosed Firm
+Undisclosed Firm
+Letterone Holdings SA",Morgan Stanley,5,11362614.30,NA,7932,11270,3151,14303,997,0.088464951,6896,23988.00,28.75%,-0.002262344,19.1,-0.076222222,41.57
+111,4/30/19,6/11/19,Crowdstrike Holdings Inc,Software Publishers,United States,CRWD,612.00,612.00,34.00,Class A Shares,Yes,"Warburg Pincus LLC
 Undisclosed Firm
 Undisclosed Firm
 Warburg Pincus LLC
@@ -2788,12 +2955,12 @@ Undisclosed Firm
 Undisclosed Firm
 CapitalG Management Company LLC
 Undisclosed Firm
-March Capital Partners GP LLC",,,"648,149.0",,,,,,,,,,,,,,,,
-113,04/30/19,07/18/19,Medallia Inc,Software Publishers,United States,MDLA,325.5,325.5,21.0,Common Shares,Yes,"Sequoia Capital Operations LLC
+March Capital Partners GP LLC",Goldman Sachs,3,648149.00,NA,118.752,249.824,172.682,299.45,-140.077,-0.560702735,0,433.22,0.00%,0.028626395,15.99,0.71,58.14
+112,4/30/19,7/18/19,Medallia Inc,Software Publishers,United States,MDLA,325.50,325.50,21.00,Common Shares,Yes,"Sequoia Capital Operations LLC
 Sequoia Capital Operations LLC
 Sequoia Capital Operations LLC
-Undisclosed Firm",,,"305,332.0",,,,,,,,,,,,,,,,
-114,06/30/19,07/24/19,Health Catalyst Inc,Computer Systems Design Services,United States,HCAT,182.0,182.0,26.0,Common Shares,Yes,"Sequoia Capital Operations LLC
+Undisclosed Firm",Bank of America,2,305332.00,NA,216.195,313.642,138.674,278.185,-82.234,-0.26219065,0,280.18,0.00%,0.021990401,13.53,0.764285667,37.049999
+113,6/30/19,7/24/19,Health Catalyst Inc,Computer Systems Design Services,United States,HCAT,182.00,182.00,26.00,Common Shares,Yes,"Sequoia Capital Operations LLC
 Sequoia Capital Operations LLC
 Norwest Venture Partners
 Norwest Venture Partners
@@ -2836,11 +3003,11 @@ CHV Capital Inc
 Leavitt Equity Partners LLC
 Undisclosed Firm
 Leerink Capital Partners LLC
-Undisclosed Firm",,,"325,000.8",,,,,,,,,,,,,,,,
-115,06/30/19,09/11/19,10X Genomics Inc,Analytical Laboratory Instrument Manufacturing,United States,TXG,390.0,390.0,39.0,Class A Shares,Yes,"Kleiner Perkins
+Undisclosed Firm",Goldman Sachs,2,325000.80,NA,73.081,112.574,44.123,112.817,-61.984,-0.550606712,47.263,144.21,32.77%,0.026563093,12.07,0.506538462,39.17
+114,6/30/19,9/11/19,10X Genomics Inc,Analytical Laboratory Instrument Manufacturing,United States,TXG,390.00,390.00,39.00,Class A Shares,Yes,"Kleiner Perkins
 Spark Capital LP
-Clayton Dubilier & Rice LLC",,,"380,000.0",,,,,,,,,,,,,,,,
-116,06/30/19,09/11/19,SmileDirectClub Inc,Dental Equipment and Supplies Manufacturing,United States,SDC,1346.4,1346.4,23.0,Class A Shares,Yes,"Meritech Capital Partners
+Clayton Dubilier & Rice LLC",JP Morgan,2,380000.00,NA,71.085,146.313,87.936,228.416,-112.485,-0.768797031,20.5,155.59,13.18%,0.042281365,14.61,0.352564103,52.75
+115,6/30/19,9/11/19,SmileDirectClub Inc,Dental Equipment and Supplies Manufacturing,United States,SDC,1346.40,1346.40,23.00,Class A Shares,Yes,"Meritech Capital Partners
 SoftBank Group Corp
 Foresite Capital Management LLC
 Undisclosed Firm
@@ -2862,8 +3029,8 @@ Meritech Capital Partners
 Wells Fargo Strategic Capital Inc
 Paladin Capital Management LLC
 Undisclosed Firm
-SoftBank Group Corp",,,"195,500.3",,,,,,,,,,,,,,,,
-117,06/30/19,09/12/19,Cloudflare Inc,Internet Service Providers,United States,NET,525.0,525.0,15.0,Class A Shares,Yes,"Venrock Inc
+SoftBank Group Corp",JP Morgan,5,195500.30,NA,154.954,423.234,213.08,133.704,-74.771,-0.176665863,202.711,542.52,37.36%,0.042281365,14.61,-0.275217391,16.67
+116,6/30/19,9/12/19,Cloudflare Inc,Internet Service Providers,United States,NET,525.00,525.00,15.00,Class A Shares,Yes,"Venrock Inc
 Undisclosed Firm
 New Enterprise Associates Inc
 New Enterprise Associates Inc
@@ -2893,8 +3060,8 @@ CapitalG Management Company LLC
 Undisclosed Firm
 Qualcomm Ventures
 Undisclosed Firm
-Undisclosed Firm",,,"332,000.1",,,,,,,,,,,,,,,,
-118,06/30/19,09/25/19,Peloton Interactive Inc,Sporting and Athletic Goods Manufacturing,United States,PTON,1160.0,1160.0,29.0,Class A Shares,Yes,"Wellington Management Company LLP
+Undisclosed Firm",Goldman Sachs,2,332000.10,NA,134.915,192.674,94.394,234.036,-87.164,-0.452391085,0,286.86,0.00%,0.029875308,14.22,0.2,18
+117,6/30/19,9/25/19,Peloton Interactive Inc,Sporting and Athletic Goods Manufacturing,United States,PTON,1160.00,1160.00,29.00,Class A Shares,Yes,"Wellington Management Company LLP
 GGV Capital
 Questmark Partners LP
 True Ventures LLC
@@ -2919,8 +3086,8 @@ Felix Capital Partners LLP
 Winslow Capital Management LLC
 GGV Capital
 Catterton Partners Corp
-True Ventures LLC",,,"972,989.0",,,,,,,,,,,,,,,,
-119,12/31/18,02/05/20,Casper Sleep Inc,Mattress Manufacturing,United States,CSPR,100.2,100.2,12.0,Common Shares,Yes,"Undisclosed Firm
+True Ventures LLC",Goldman Sachs,1,972989.00,NA,435,915,324,585.8,-195.6,-0.213770492,0,864.50,0.00%,0.03340276,15.96,-0.111724138,25.76
+118,12/31/18,2/5/20,Casper Sleep Inc,Mattress Manufacturing,United States,CSPR,100.20,100.20,12.00,Common Shares,Yes,"Undisclosed Firm
 Lerer Ventures LP
 SV Angel
 Queensbridge Venture Partners LLC
@@ -2966,226 +3133,4 @@ Queensbridge Venture Partners LLC
 Correlation Ventures LP
 Cendana Capital GP LLC
 Slow Ventures LLC
-Correlation Ventures LP",,,"348,263.5",,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Correlation Ventures LP",Morgan Stanley,2,348263.50,NA,259.687,312.319,113.994,220.12,-67.399,-0.215801792,25,192.51,12.99%,0.01674695,16.049999,0.125,13.5
