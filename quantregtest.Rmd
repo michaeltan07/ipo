@@ -15,10 +15,10 @@ library(glue)
 library(tidyverse)
 
 
-ipos = read.csv("MT IPO DATA_No pharma_No Additions.csv")
+ipos = read.csv("MT IPO no market.csv")
 ipos = ipos %>%
   filter(Issue.Date != "")
-View(ipos)
+
 ```
 
 ## MARKET FACTORS
@@ -64,10 +64,12 @@ l.out = purrr::pmap(stocks, ~BatchGetSymbols(tickers = ..1,
                                      freq.data = "daily"))
 
 for(i in 1:nrow(ipos)){
-  if(length(l.out[[i]][["df.tickers"]][["price.close"]]) == 0){
-      ipos$FirstDayClose[i] = NA
-  }  else {
-      ipos$FirstDayClose[i] = l.out[[i]][["df.tickers"]][["price.close"]][[1]]
+  if(is.na(ipos$FirstDayClose[i])){
+    if(length(l.out[[i]][["df.tickers"]][["price.close"]]) == 0){
+        ipos$FirstDayClose[i] = NA
+    }  else {
+        ipos$FirstDayClose[i] = l.out[[i]][["df.tickers"]][["price.close"]][[1]]
+    }
   }
 }
 
@@ -76,14 +78,6 @@ ipos$OneDayChange = ipos$FirstDayClose/ipos$Offer.Price - 1
 ipos$market_performance = sapply(ipos$Issue.Date, GetMarketPerformance)
 ipos$VIX_before = sapply(ipos$Issue.Date, GetVIX)
 
-ipos = ipos %>%
-  rename(Proceeds = Proceeds.Amt...in..this.Mkt....mil.,
-         Offer.Price = X...Offer....Price,
-         Amount.Filed = Amt.Filed....in.this.Mkt.....mil.,
-         Additional.Lead.Underwriters = X..of.additional.lead.underwriters,
-         Total.Revenues.Last.Reported = Total.Revenues.Last.Reported.Fiscal.Period.in.S.1..US..mil.,
-         Total.Assets = X..Total...Assets...Before....the..Offering......mil.,
-         HalfYearChange = X..Change.Stock.Price.180.Days.After.Offer)
 
 ipos$Total.Assets = as.numeric(ipos$Total.Assets)
 ipos$Total.Revenues.Last.Reported = as.numeric(ipos$Total.Revenues.Last.Reported)
@@ -91,8 +85,10 @@ ipos$Selling.and.Marketing = as.numeric(ipos$Selling.and.Marketing)
 ipos$Total.Operating.Expenses = as.numeric(ipos$Total.Operating.Expenses)
 ipos$Net.Income = as.numeric(ipos$Net.Income)
 ipos$Net.Income.Margin = ipos$Net.Income/ipos$Total.Revenues.Last.Reported
+
+View(ipos)
   
-write.csv(ipos, "MT IPO DATA_with_market.csv")
+write.csv(ipos, "MT IPO DATA_with_market_final.csv")
 
 
 ```

@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "classification"
 output: html_notebook
 ---
 
@@ -19,8 +19,6 @@ library(mice)
 
 library(randomForest)
 require(caTools)
-
-library(car)
 ```
 
 
@@ -47,7 +45,6 @@ miceOutput <- complete(miceIPO)  # generate the completed data.
 ipos.clean = miceOutput
 
 
-
 ```
 
 ##EDA
@@ -55,14 +52,15 @@ ipos.clean = miceOutput
 
 ggplot(ipos.clean, aes(x= Total.Revenues.Last.Reported)) + geom_histogram(binwidth=100, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 ggplot(ipos.clean, aes(x= Selling.and.Marketing)) + geom_histogram(binwidth=10, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Proceeds)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos.clean, aes(x= Total.Operating.Expenses)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 ggplot(ipos.clean, aes(x= Net.Income)) + geom_histogram(binwidth=40, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 ggplot(ipos.clean, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 
 
 ggplot(ipos.clean, aes(x= LogOneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 
-ipos.clean$Long.Term.Debt.Binary = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
+ipos.clean$Long.Term.Debt = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
+ipos.clean$LogOneDayChange = ifelse(ipos.clean$LogOneDayChange >0, 1,0)
 
 
 ```
@@ -75,16 +73,13 @@ ipos.clean$Long.Term.Debt.Binary = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
 #TODO: Add industry stuff?
 #TODO: Classification (return positive or neg)
 ```{r}
-library(mgcv)
 
-gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(market_performance) + s(Total.Revenues.Last.Reported) + s(Total.Assets) + s(Selling.and.Marketing) + s(Net.Income) + s(Net.Income.Margin) + s(RevGrowth) + s(Total.VC.Funding.Raised) +s(Long.Term.Debt) +s(Proceeds) + Investment.Bank..Lead.Left.)
-
-plot(gam, shade = TRUE)
-summary(gam)
-
-model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + log(Proceeds) + + market_performance*Total.Revenues.Last.Reported + market_performance*Long.Term.Debt +Total.Assets*Selling.and.Marketing + Selling.and.Marketing*RevGrowth + Selling.and.Marketing*Total.VC.Funding.Raised)
+model.1 = glm(data = ipos.clean, formula = LogOneDayChange ~ Type.of.Security + Investment.Bank..Lead.Left. + Additional.Lead.Underwriters  + Proceeds, family=binomial(link='logit'))
 summary(model.1)
 
+
+model.2 = lm(data = ipos.clean, formula =  LogOneDayChange ~ VIX_before + market_performance + Total.Revenues.Last.Reported + Total.Assets + Selling.and.Marketing + Total.Operating.Expenses + Net.Income + Net.Income.Margin + RevGrowth + Total.VC.Funding.Raised + Long.Term.Debt.Binary)
+summary(model.2)
 
 par(mfrow=c(2,2))
 plot(model.2)
@@ -129,6 +124,6 @@ varImpPlot(rf,type=2)
 ##Sentiment Analysis
 ```{r}
 
-summary(ipos.clean)
+
 
 ```
