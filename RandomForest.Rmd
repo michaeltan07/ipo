@@ -39,7 +39,7 @@ ipos.df$Total.VC.Funding.Raised = as.numeric(ipos.df$Total.VC.Funding.Raised)/10
 
 
 ipos = ipos.df %>% 
-  select(LogOneDayChange, VIX_before, market_performance,Total.VC.Funding.Raised, Total.Revenues.Last.Reported, Total.Assets,Long.Term.Debt, Long.Term.Debt.to.Total.Asset.Ratio, Selling.and.Marketing, Total.Operating.Expenses, Net.Income, Net.Income.Margin, Type.of.Security, Investment.Bank..Lead.Left., Additional.Lead.Underwriters, RevGrowth, Proceeds)
+  dplyr::select(LogOneDayChange, VIX_before, market_performance,Total.VC.Funding.Raised, Total.Revenues.Last.Reported, Total.Assets,Long.Term.Debt, Long.Term.Debt.to.Total.Asset.Ratio, Selling.and.Marketing, Total.Operating.Expenses, Net.Income, Net.Income.Margin, Type.of.Security, Investment.Bank..Lead.Left., Additional.Lead.Underwriters, RevGrowth, Proceeds)
 
 miceIPO <- mice(ipos, method="rf")  # perform mice imputation, based on random forests.
 miceOutput <- complete(miceIPO)  # generate the completed data.
@@ -68,12 +68,23 @@ ipos.clean$Long.Term.Debt.Binary = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
 ```
 
 ##Regression
-#TODO: CHECK MULTICOLLINEARITY
-#TODO: CHECK INTERACTIONS
-#TODO: CHECK TRANSFORMATION
-#TODO: GAM for TRANSFORMATIONS
+#TODO: check: smoothing functions
 #TODO: Add industry stuff?
 #TODO: Classification (return positive or neg)
+
+#TODO: FORWARD OR BACKWARD SELECTION, STEP FUNCTION
+```{r}
+library(MASS)
+# Fit the full model 
+full.model <- lm(LogOneDayChange ~., data = ipos.clean)
+# Stepwise regression model
+step.model <- stepAIC(full.model, direction = "both", 
+                      trace = FALSE)
+summary(step.model)
+```
+
+
+## REGRESSION
 ```{r}
 library(mgcv)
 
@@ -82,12 +93,13 @@ gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(mar
 plot(gam, shade = TRUE)
 summary(gam)
 
-model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + log(Proceeds) + + market_performance*Total.Revenues.Last.Reported + market_performance*Long.Term.Debt +Total.Assets*Selling.and.Marketing + Selling.and.Marketing*RevGrowth + Selling.and.Marketing*Total.VC.Funding.Raised)
+model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised)
 summary(model.1)
 
+vif(model.1)
 
 par(mfrow=c(2,2))
-plot(model.2)
+plot(model.1)
 
 ```
 
@@ -99,7 +111,7 @@ train = subset(ipos.clean, sample == TRUE)
 test  = subset(ipos.clean, sample == FALSE)
 
 x_test = test %>%
-  select(-LogOneDayChange)
+  dplyr::select(-LogOneDayChange)
 
 rf <- randomForest(
   LogOneDayChange ~ .,

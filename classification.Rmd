@@ -10,15 +10,20 @@ library(finreportr)
 library(edgar)
 library(BatchGetSymbols)
 library(lubridate)
+library(dplyr)
 
 library(pdftools)
 library(glue)
 library(tidyverse)
 
+library(caret)
+
 library(mice)
 
 library(randomForest)
 require(caTools)
+
+library(MLmetrics)
 ```
 
 
@@ -34,10 +39,8 @@ ipos.df$RevGrowth = ipos.df$Total.Revenues.Last.Reported/ipos.df$Total.Revenues.
 ipos.df$Long.Term.Debt.to.Total.Asset.Ratio = ipos.df$Long.Term.Debt/ipos.df$Total.Assets
 ipos.df$Total.VC.Funding.Raised = as.numeric(ipos.df$Total.VC.Funding.Raised)/1000
 
-
-
 ipos = ipos.df %>% 
-  select(LogOneDayChange, VIX_before, market_performance,Total.VC.Funding.Raised, Total.Revenues.Last.Reported, Total.Assets,Long.Term.Debt, Long.Term.Debt.to.Total.Asset.Ratio, Selling.and.Marketing, Total.Operating.Expenses, Net.Income, Net.Income.Margin, Type.of.Security, Investment.Bank..Lead.Left., Additional.Lead.Underwriters, RevGrowth, Proceeds)
+  dplyr::select(LogOneDayChange, VIX_before, market_performance,Total.VC.Funding.Raised, Total.Revenues.Last.Reported, Total.Assets,Long.Term.Debt, Long.Term.Debt.to.Total.Asset.Ratio, Selling.and.Marketing, Total.Operating.Expenses, Net.Income, Net.Income.Margin, Type.of.Security, Investment.Bank..Lead.Left., Additional.Lead.Underwriters, RevGrowth, Proceeds)
 
 miceIPO <- mice(ipos, method="rf")  # perform mice imputation, based on random forests.
 miceOutput <- complete(miceIPO)  # generate the completed data.
@@ -59,9 +62,7 @@ ggplot(ipos.clean, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, col
 
 ggplot(ipos.clean, aes(x= LogOneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
 
-ipos.clean$Long.Term.Debt = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
-ipos.clean$OneDayChange  = as.factor(ipos.clean$OneDayChange)
 
 ```
 
@@ -73,48 +74,184 @@ ipos.clean$OneDayChange  = as.factor(ipos.clean$OneDayChange)
 #TODO: Add industry stuff?
 #TODO: Classification (return positive or neg)
 ```{r}
+model.2 = glm(data = ipos.clean, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
 
-model.1 = glm(data = ipos.clean, formula = Underpriced ~ Type.of.Security + Investment.Bank..Lead.Left. + Additional.Lead.Underwriters  + Proceeds, family=binomial(link='logit'))
-summary(model.1)
-
-
-model.2 = glm(data = ipos.clean, formula =  Underpriced ~ VIX_before + market_performance + Total.Revenues.Last.Reported + Total.Assets + Selling.and.Marketing + Total.Operating.Expenses + Net.Income + Net.Income.Margin + RevGrowth + Total.VC.Funding.Raised + Long.Term.Debt + Proceeds, family=binomial(link='logit'))
 summary(model.2)
 
 par(mfrow=c(2,2))
 plot(model.2)
 
+
+
+```
+
+##Logistic Regression Confusion for Underpriced 0.2
+```{r}
+set.seed(123)
+sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
+train = subset(ipos.clean, sample == TRUE)
+train = train %>%
+  dplyr::select(-LogOneDayChange)
+test  = subset(ipos.clean, sample == FALSE)
+test = test %>%
+  dplyr::select(-LogOneDayChange)
+  
+
+logit.model_0.2 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+
+pdata_log <- predict(logit.model_0.2, newdata = test, type = "response")
+
+confusionMatrix(data = as.factor(as.numeric(pdata_log>0.5)), reference = as.factor(test$Underpriced))
+
+#CV
+ipos_cv<-ipos.clean[sample(nrow(ipos.clean)),]
+folds<-cut(seq(1,nrow(ipos.clean)),breaks=10,labels=FALSE)
+test_list<-list()
+train_list<-list()
+for(i in 1:10){
+  test_indices<-which(folds==i,arr.ind=TRUE)
+  ipos_test<-ipos_cv[test_indices,]
+  test_list[[i]]<-ipos_test
+  ipos_train<-ipos_cv[-test_indices,]
+  train_list[[i]]<-ipos_train
+}
+
+logit.model_0.2_auc = c()
+for(i in 1:10){
+  logit.model_0.2_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  
+  y_pred = predict(logit.model_0.2_cv, newdata = test_list[[i]], type = "response")
+  y_pred = as.numeric(y_pred>0.5)
+  y_true = test_list[[i]]$Underpriced
+  logit.model_0.2_auc  = AUC(y_pred = y_pred, y_true = y_true)
+}
+test_auc_0.2<-c(mean(logit.model_0.2_auc))
+test_auc_0.2
+
+
+
+```
+
+
+##Logistic Regression Confusion for Underpriced 0.1
+```{r}
+set.seed(123)
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.0953 , 1,0)
+sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
+train = subset(ipos.clean, sample == TRUE)
+train = train %>%
+  dplyr::select(-LogOneDayChange)
+test  = subset(ipos.clean, sample == FALSE)
+test = test %>%
+  dplyr::select(-LogOneDayChange)
+
+logit.model_0.1 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+
+pdata_log <- predict(logit.model_0.1, newdata = test, type = "response")
+
+confusionMatrix(data = as.factor(as.numeric(pdata_log>0.5)), reference = as.factor(test$Underpriced))
+
+
+#CV
+ipos_cv<-ipos.clean[sample(nrow(ipos.clean)),]
+folds<-cut(seq(1,nrow(ipos.clean)),breaks=10,labels=FALSE)
+test_list<-list()
+train_list<-list()
+for(i in 1:10){
+  test_indices<-which(folds==i,arr.ind=TRUE)
+  ipos_test<-ipos_cv[test_indices,]
+  test_list[[i]]<-ipos_test
+  ipos_train<-ipos_cv[-test_indices,]
+  train_list[[i]]<-ipos_train
+}
+
+logit.model_0.1_auc = c()
+for(i in 1:10){
+  logit.model_0.1_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  
+  y_pred = predict(logit.model_0.1_cv, newdata = test_list[[i]], type = "response")
+  y_pred = as.numeric(y_pred>0.5)
+  y_true = test_list[[i]]$Underpriced
+  logit.model_0.1_auc  = AUC(y_pred = y_pred, y_true = y_true)
+}
+test_auc_0.1<-c(mean(logit.model_0.1_auc))
+test_auc_0.1
+
+```
+
+##Logistic Regression Confusion for Underpriced 0
+```{r}
+set.seed(123)
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0 , 1,0)
+sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
+train = subset(ipos.clean, sample == TRUE)
+train = train %>%
+  dplyr::select(-LogOneDayChange)
+test  = subset(ipos.clean, sample == FALSE)
+test = test %>%
+  dplyr::select(-LogOneDayChange)
+
+logit.model_0 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+
+pdata_log <- predict(logit.model_0, newdata = test, type = "response")
+
+confusionMatrix(data = as.factor(as.numeric(pdata_log>0.5)), reference = as.factor(test$Underpriced))
+
+#CV
+ipos_cv<-ipos.clean[sample(nrow(ipos.clean)),]
+folds<-cut(seq(1,nrow(ipos.clean)),breaks=10,labels=FALSE)
+test_list<-list()
+train_list<-list()
+for(i in 1:10){
+  test_indices<-which(folds==i,arr.ind=TRUE)
+  ipos_test<-ipos_cv[test_indices,]
+  test_list[[i]]<-ipos_test
+  ipos_train<-ipos_cv[-test_indices,]
+  train_list[[i]]<-ipos_train
+}
+
+logit.model_0_auc = c()
+for(i in 1:10){
+  logit.model_0_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  
+  y_pred = predict(logit.model_0_cv, newdata = test_list[[i]], type = "response")
+  y_pred = as.numeric(y_pred>0.5)
+  y_true = test_list[[i]]$Underpriced
+  logit.model_0_auc  = AUC(y_pred = y_pred, y_true = y_true)
+}
+test_auc_0<-c(mean(logit.model_0_auc))
+test_auc_0
+
 ```
 
 ##RF
 ```{r}
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
 set.seed(123)
-sample = sample.split(ipos.clean$OneDayChange, SplitRatio = .8)
+sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
 train = subset(ipos.clean, sample == TRUE)
+train = train %>%
+  dplyr::select(-LogOneDayChange)
 test  = subset(ipos.clean, sample == FALSE)
+test = test %>%
+  dplyr::select(-LogOneDayChange)
 
 x_test = test %>%
-  select(-OneDayChange)
+  dplyr::select(-Underpriced)
 
 rf_class <- randomForest(
-  OneDayChange ~ .,
+  Underpriced ~ .,
   data=train,
   xtest = x_test,
-  ytest = test$OneDayChange,
+  ytest = test$Underpriced,
   keep.forest=TRUE
 )
 
-pred = predict(rf_class, newdata=test)
+pdata_rf <- predict(rf_class, newdata = test, type = "response")
 
-table(predict(rf_class), train$OneDayChange)
-
-varImpPlot(rf,type=2)
-
-```
-
-##Sentiment Analysis
-```{r}
-
+confusionMatrix(data = as.factor(as.numeric(pdata_rf>0.5)), reference = as.factor(test$Underpriced))
 
 
 ```
+
+
