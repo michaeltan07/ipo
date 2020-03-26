@@ -39,6 +39,13 @@ ipos.df$RevGrowth = ipos.df$Total.Revenues.Last.Reported/ipos.df$Total.Revenues.
 ipos.df$Long.Term.Debt.to.Total.Asset.Ratio = ipos.df$Long.Term.Debt/ipos.df$Total.Assets
 ipos.df$Total.VC.Funding.Raised = as.numeric(ipos.df$Total.VC.Funding.Raised)/1000
 
+
+ipos.df = ipos.df %>%
+  filter(Ticker.Symbol != "UBER") %>%
+  filter(Ticker.Symbol != "FB") %>%
+  filter(Ticker.Symbol != "GRPN") %>%
+  filter(Ticker.Symbol != "LYFT") 
+
 ipos = ipos.df %>% 
   dplyr::select(LogOneDayChange, VIX_before, market_performance,Total.VC.Funding.Raised, Total.Revenues.Last.Reported, Total.Assets,Long.Term.Debt, Long.Term.Debt.to.Total.Asset.Ratio, Selling.and.Marketing, Total.Operating.Expenses, Net.Income, Net.Income.Margin, Type.of.Security, Investment.Bank..Lead.Left., Additional.Lead.Underwriters, RevGrowth, Proceeds)
 
@@ -47,61 +54,42 @@ miceOutput <- complete(miceIPO)  # generate the completed data.
 
 ipos.clean = miceOutput
 
-
-```
-
-##EDA
-```{r}
-
-ggplot(ipos.clean, aes(x= Total.Revenues.Last.Reported)) + geom_histogram(binwidth=100, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Selling.and.Marketing)) + geom_histogram(binwidth=10, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Total.Operating.Expenses)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Net.Income)) + geom_histogram(binwidth=40, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-
-
-ggplot(ipos.clean, aes(x= LogOneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
 
-```
-
-##Regression
-#TODO: CHECK MULTICOLLINEARITY
-#TODO: CHECK INTERACTIONS
-#TODO: CHECK TRANSFORMATION
-#TODO: GAM for TRANSFORMATIONS
-#TODO: Add industry stuff?
-#TODO: Classification (return positive or neg)
-```{r}
-model.2 = glm(data = ipos.clean, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
-
-summary(model.2)
-
-par(mfrow=c(2,2))
-plot(model.2)
-
-
 
 ```
+
 
 ##Logistic Regression Confusion for Underpriced 0.2
 ```{r}
 set.seed(123)
-sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
-train = subset(ipos.clean, sample == TRUE)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+                                  list = FALSE, 
+                                  times = 1)
+
+train = ipos.clean[trainIndex,]
 train = train %>%
   dplyr::select(-LogOneDayChange)
-test  = subset(ipos.clean, sample == FALSE)
+test = ipos.clean[-trainIndex,]
 test = test %>%
   dplyr::select(-LogOneDayChange)
+
+
   
 
-logit.model_0.2 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+logit.model_0.2 = glm(data = train,formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
 
 pdata_log <- predict(logit.model_0.2, newdata = test, type = "response")
 
 confusionMatrix(data = as.factor(as.numeric(pdata_log>0.5)), reference = as.factor(test$Underpriced))
+
+summary(logit.model_0.2)
+
+#ROC Curve
+simple_roc <- function(labels, scores){
+  labels <- labels[order(scores, decreasing=TRUE)]
+  data.frame(TPR=cumsum(labels)/sum(labels), FPR=cumsum(!labels)/sum(!labels), labels)
+}
 
 #CV
 ipos_cv<-ipos.clean[sample(nrow(ipos.clean)),]
@@ -118,7 +106,7 @@ for(i in 1:10){
 
 logit.model_0.2_auc = c()
 for(i in 1:10){
-  logit.model_0.2_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  logit.model_0.2_cv = glm(data = train_list[[i]], formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
   
   y_pred = predict(logit.model_0.2_cv, newdata = test_list[[i]], type = "response")
   y_pred = as.numeric(y_pred>0.5)
@@ -137,15 +125,18 @@ test_auc_0.2
 ```{r}
 set.seed(123)
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.0953 , 1,0)
-sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
-train = subset(ipos.clean, sample == TRUE)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+                                  list = FALSE, 
+                                  times = 1)
+
+train = ipos.clean[trainIndex,]
 train = train %>%
   dplyr::select(-LogOneDayChange)
-test  = subset(ipos.clean, sample == FALSE)
+test = ipos.clean[-trainIndex,]
 test = test %>%
   dplyr::select(-LogOneDayChange)
 
-logit.model_0.1 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+logit.model_0.1 = glm(data = train, formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
 
 pdata_log <- predict(logit.model_0.1, newdata = test, type = "response")
 
@@ -167,7 +158,7 @@ for(i in 1:10){
 
 logit.model_0.1_auc = c()
 for(i in 1:10){
-  logit.model_0.1_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  logit.model_0.1_cv = glm(data = train_list[[i]], formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
   
   y_pred = predict(logit.model_0.1_cv, newdata = test_list[[i]], type = "response")
   y_pred = as.numeric(y_pred>0.5)
@@ -183,15 +174,18 @@ test_auc_0.1
 ```{r}
 set.seed(123)
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0 , 1,0)
-sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
-train = subset(ipos.clean, sample == TRUE)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+                                  list = FALSE, 
+                                  times = 1)
+
+train = ipos.clean[trainIndex,]
 train = train %>%
   dplyr::select(-LogOneDayChange)
-test  = subset(ipos.clean, sample == FALSE)
+test = ipos.clean[-trainIndex,]
 test = test %>%
   dplyr::select(-LogOneDayChange)
 
-logit.model_0 = glm(data = train, formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+logit.model_0 = glm(data = train, formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
 
 pdata_log <- predict(logit.model_0, newdata = test, type = "response")
 
@@ -212,7 +206,7 @@ for(i in 1:10){
 
 logit.model_0_auc = c()
 for(i in 1:10){
-  logit.model_0_cv = glm(data = train_list[[i]], formula =  Underpriced ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised, family=binomial(link='logit'))
+  logit.model_0_cv = glm(data = train_list[[i]], formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
   
   y_pred = predict(logit.model_0_cv, newdata = test_list[[i]], type = "response")
   y_pred = as.numeric(y_pred>0.5)
@@ -228,11 +222,14 @@ test_auc_0
 ```{r}
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
 set.seed(123)
-sample = sample.split(ipos.clean$Underpriced, SplitRatio = .8)
-train = subset(ipos.clean, sample == TRUE)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+                                  list = FALSE, 
+                                  times = 1)
+
+train = ipos.clean[trainIndex,]
 train = train %>%
   dplyr::select(-LogOneDayChange)
-test  = subset(ipos.clean, sample == FALSE)
+test = ipos.clean[-trainIndex,]
 test = test %>%
   dplyr::select(-LogOneDayChange)
 

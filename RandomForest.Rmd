@@ -27,6 +27,7 @@ library(car)
 ## Data Clean
 ```{r}
 
+
 ipos.df = read.csv("MT IPO DATA_with_market_final.csv")
 
 ipos.df$Net.Income.Margin = ipos.df$Net.Income / ipos.df$Total.Revenues.Last.Reported
@@ -36,6 +37,11 @@ ipos.df$RevGrowth = ipos.df$Total.Revenues.Last.Reported/ipos.df$Total.Revenues.
 ipos.df$Long.Term.Debt.to.Total.Asset.Ratio = ipos.df$Long.Term.Debt/ipos.df$Total.Assets
 ipos.df$Total.VC.Funding.Raised = as.numeric(ipos.df$Total.VC.Funding.Raised)/1000
 
+ipos.df = ipos.df %>%
+  filter(Ticker.Symbol != "UBER") %>%
+  filter(Ticker.Symbol != "FB") %>%
+  filter(Ticker.Symbol != "GRPN") %>%
+  filter(Ticker.Symbol != "LYFT")
 
 
 ipos = ipos.df %>% 
@@ -52,25 +58,21 @@ ipos.clean = miceOutput
 
 ##EDA
 ```{r}
+ggplot(ipos.df, aes(x= OneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..count..), position = "stack") + theme_minimal()
 
-ggplot(ipos.clean, aes(x= Total.Revenues.Last.Reported)) + geom_histogram(binwidth=100, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Selling.and.Marketing)) + geom_histogram(binwidth=10, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Proceeds)) + geom_histogram(binwidth=50, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Net.Income)) + geom_histogram(binwidth=40, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
-ggplot(ipos.clean, aes(x= Net.Income.Margin)) + geom_histogram(binwidth=0.2, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos.clean, aes(x= LogOneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..count..), position = "stack") + theme_minimal()
 
+ggplot(ipos.clean, aes(y = LogOneDayChange, x = Total.Assets)) + geom_point() + theme_minimal() +   geom_smooth(method='lm', formula= y~x)
 
-ggplot(ipos.clean, aes(x= LogOneDayChange)) + geom_histogram(binwidth=0.1, colour="black", aes(y=..density.., fill=..count..), position = "stack") + theme_minimal()
+ggplot(ipos.clean, aes(y = LogOneDayChange, x = VIX_before)) + geom_point() + theme_minimal() +   geom_smooth(method='lm', formula= y~x)
 
-ipos.clean$Long.Term.Debt.Binary = ifelse(ipos.clean$Long.Term.Debt > 1, 1, 0)
+ggplot(ipos.clean, aes(y = LogOneDayChange, x = market_performance)) + geom_point() + theme_minimal() +   geom_smooth(method='lm', formula= y~x)
 
+library(tseries)
+jarque.bera.test(ipos.clean$LogOneDayChange)
 
 ```
 
-##Regression
-#TODO: check: smoothing functions
-#TODO: Add industry stuff?
-#TODO: Classification (return positive or neg)
 
 #TODO: FORWARD OR BACKWARD SELECTION, STEP FUNCTION
 ```{r}
@@ -81,6 +83,9 @@ full.model <- lm(LogOneDayChange ~., data = ipos.clean)
 step.model <- stepAIC(full.model, direction = "both", 
                       trace = FALSE)
 summary(step.model)
+vif(step.model)
+par(mfrow=c(2,2))
+plot(step.model)
 ```
 
 
@@ -90,17 +95,16 @@ library(mgcv)
 
 gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(market_performance) + s(Total.Revenues.Last.Reported) + s(Total.Assets) + s(Selling.and.Marketing) + s(Net.Income) + s(Net.Income.Margin) + s(RevGrowth) + s(Total.VC.Funding.Raised) +s(Long.Term.Debt) +s(Proceeds) + Investment.Bank..Lead.Left.)
 
-plot(gam, shade = TRUE)
 summary(gam)
 
-model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance + log(Total.Revenues.Last.Reported) + log(Total.Assets) + log(Selling.and.Marketing) + Net.Income + Net.Income.Margin + RevGrowth + log(Total.VC.Funding.Raised) + Long.Term.Debt + Total.Assets + log(Proceeds) + market_performance:Total.Revenues.Last.Reported + market_performance:Long.Term.Debt + Total.Assets:Selling.and.Marketing + Selling.and.Marketing:RevGrowth + Selling.and.Marketing:Total.VC.Funding.Raised)
+model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing)
 summary(model.1)
+
 
 vif(model.1)
 
 par(mfrow=c(2,2))
 plot(model.1)
-
 ```
 
 ##RF
@@ -135,12 +139,5 @@ tibble::tibble(
   xlab("Number of trees")
 
 varImpPlot(rf,type=2)
-
-```
-
-##Sentiment Analysis
-```{r}
-
-summary(ipos.clean)
 
 ```
