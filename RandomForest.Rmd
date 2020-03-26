@@ -99,6 +99,14 @@ summary(gam)
 
 model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing)
 summary(model.1)
+```
+
+```{r}
+
+library(interactions)
+
+interact_plot(model.1, pred = Selling.and.Marketing, modx = RevGrowth)
+interact_plot(model.1, pred = market_performance, modx = Selling.and.Marketing)
 
 
 vif(model.1)
