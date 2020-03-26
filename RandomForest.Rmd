@@ -97,7 +97,7 @@ gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(mar
 
 summary(gam)
 
-model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security + RevGrowth + Total.VC.Funding.Raised + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing)
+model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing)
 summary(model.1)
 
 
@@ -105,6 +105,8 @@ vif(model.1)
 
 par(mfrow=c(2,2))
 plot(model.1)
+
+
 ```
 
 ##RF
