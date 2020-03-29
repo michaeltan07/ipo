@@ -24,6 +24,7 @@ library(randomForest)
 require(caTools)
 
 library(MLmetrics)
+library(ResourceSelection)
 ```
 
 
@@ -63,7 +64,8 @@ ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
 ##Logistic Regression Confusion for Underpriced 0.2
 ```{r}
 set.seed(123)
-trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1655 , 1,0)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .75, 
                                   list = FALSE, 
                                   times = 1)
 
@@ -116,16 +118,18 @@ for(i in 1:10){
 test_auc_0.2<-c(mean(logit.model_0.2_auc))
 test_auc_0.2
 
+summary(ipo)
+
 
 
 ```
 
 
-##Logistic Regression Confusion for Underpriced 0.1
+##Logistic Regression Confusion for Underpriced 0.26
 ```{r}
 set.seed(123)
-ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.0953 , 1,0)
-trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.2311 , 1,0)
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .75, 
                                   list = FALSE, 
                                   times = 1)
 
@@ -136,9 +140,11 @@ test = ipos.clean[-trainIndex,]
 test = test %>%
   dplyr::select(-LogOneDayChange)
 
-logit.model_0.1 = glm(data = train, formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
+logit.model_0.26 = glm(data = train, formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
 
-pdata_log <- predict(logit.model_0.1, newdata = test, type = "response")
+summary(logit.model_0.26)
+
+pdata_log <- predict(logit.model_0.26, newdata = test, type = "response")
 
 confusionMatrix(data = as.factor(as.numeric(pdata_log>0.5)), reference = as.factor(test$Underpriced))
 
@@ -156,25 +162,28 @@ for(i in 1:10){
   train_list[[i]]<-ipos_train
 }
 
-logit.model_0.1_auc = c()
+logit.model_0.26_auc = c()
 for(i in 1:10){
-  logit.model_0.1_cv = glm(data = train_list[[i]], formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
+  logit.model_0.26_cv = glm(data = train_list[[i]], formula = Underpriced ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing, family=binomial(link='logit'))
   
-  y_pred = predict(logit.model_0.1_cv, newdata = test_list[[i]], type = "response")
+  y_pred = predict(logit.model_0.26_cv, newdata = test_list[[i]], type = "response")
   y_pred = as.numeric(y_pred>0.5)
   y_true = test_list[[i]]$Underpriced
-  logit.model_0.1_auc  = AUC(y_pred = y_pred, y_true = y_true)
+  logit.model_0.26_auc  = AUC(y_pred = y_pred, y_true = y_true)
 }
-test_auc_0.1<-c(mean(logit.model_0.1_auc))
-test_auc_0.1
+test_auc_0.26<-c(mean(logit.model_0.26_auc))
+test_auc_0.26
 
+
+library(pscl)
+pR2(logit.model_0.26)
 ```
 
 ##Logistic Regression Confusion for Underpriced 0
 ```{r}
 set.seed(123)
 ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0 , 1,0)
-trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
+trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .75, 
                                   list = FALSE, 
                                   times = 1)
 
@@ -220,7 +229,7 @@ test_auc_0
 
 ##RF
 ```{r}
-ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.1823 , 1,0)
+ipos.clean$Underpriced = ifelse(ipos.clean$LogOneDayChange >0.2311 , 1,0)
 set.seed(123)
 trainIndex <- createDataPartition(ipos.clean$Underpriced, p = .8, 
                                   list = FALSE, 

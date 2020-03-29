@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ##LOAD
@@ -21,6 +23,10 @@ library(randomForest)
 require(caTools)
 
 library(car)
+
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
 ```
 
 
@@ -71,6 +77,11 @@ ggplot(ipos.clean, aes(y = LogOneDayChange, x = market_performance)) + geom_poin
 library(tseries)
 jarque.bera.test(ipos.clean$LogOneDayChange)
 
+ipos.underpriced = ipos.df %>% 
+  filter(ipos.df$OneDayChange<0)
+
+View(ipos.df)
+
 ```
 
 
@@ -83,6 +94,7 @@ full.model <- lm(LogOneDayChange ~., data = ipos.clean)
 step.model <- stepAIC(full.model, direction = "both", 
                       trace = FALSE)
 summary(step.model)
+tab_model(step.model)
 vif(step.model)
 par(mfrow=c(2,2))
 plot(step.model)
@@ -95,10 +107,16 @@ library(mgcv)
 
 gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(market_performance) + s(Total.Revenues.Last.Reported) + s(Total.Assets) + s(Selling.and.Marketing) + s(Net.Income) + s(Net.Income.Margin) + s(RevGrowth) + s(Total.VC.Funding.Raised) +s(Long.Term.Debt) +s(Proceeds) + Investment.Bank..Lead.Left.)
 
+plot(gam)
 summary(gam)
+tab_model(gam)
 
 model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_performance  + Selling.and.Marketing + Net.Income.Margin + RevGrowth + Total.Assets + log(Proceeds) + Type.of.Security  + Selling.and.Marketing:RevGrowth + market_performance:Selling.and.Marketing)
 summary(model.1)
+
+tab_model(model.1)
+
+
 ```
 
 ```{r}
