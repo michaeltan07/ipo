@@ -80,7 +80,6 @@ jarque.bera.test(ipos.clean$LogOneDayChange)
 ipos.underpriced = ipos.df %>% 
   filter(ipos.df$OneDayChange<0)
 
-View(ipos.df)
 
 ```
 
@@ -91,7 +90,7 @@ library(MASS)
 # Fit the full model 
 full.model <- lm(LogOneDayChange ~., data = ipos.clean)
 # Stepwise regression model
-step.model <- stepAIC(full.model, direction = "both", 
+step.model <- stepAIC(full.model, direction = "back", 
                       trace = FALSE)
 summary(step.model)
 tab_model(step.model)
@@ -104,6 +103,17 @@ plot(step.model)
 ## REGRESSION
 ```{r}
 library(mgcv)
+library(hierNet)
+
+
+predictors.matrix = ipos.clean %>%
+  dplyr::select(-LogOneDayChange, -Investment.Bank..Lead.Left., -Type.of.Security)
+
+predictors.matrix = as.matrix(predictors.matrix)
+
+
+hierNet(predictors.matrix, ipos.clean$LogOneDayChange, lam = 1)
+
 
 gam <- gam(data = ipos.clean, formula =  LogOneDayChange ~ s(VIX_before) + s(market_performance) + s(Total.Revenues.Last.Reported) + s(Total.Assets) + s(Selling.and.Marketing) + s(Net.Income) + s(Net.Income.Margin) + s(RevGrowth) + s(Total.VC.Funding.Raised) +s(Long.Term.Debt) +s(Proceeds) + Investment.Bank..Lead.Left.)
 
@@ -115,6 +125,10 @@ model.1 = lm(data = ipos.clean, formula = LogOneDayChange ~ VIX_before + market_
 summary(model.1)
 
 tab_model(model.1)
+
+ipos.df$Issue.Date = as.Date(ipos.df$Issue.Date, format = "%m/%d/%y")
+
+plot(y=model.1$residuals, x =ipos.df$Issue.Date, ylab = "residuals", xlab = "issue date")
 
 
 ```
